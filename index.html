@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>novaride</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="lg:px-6 lg-bg-white overflow-x-hidden">
+
+    <!-- header part start -->
+
+    <section>
+        <header class="py-6 px-3 relative z-10">
+            <nav class="flex items-center justify-between">
+                <div>
+                    <img src="img/logo.svg" alt="" class="h-[33.44px] w-[180px]">
+                </div>
+                <div class="text-black gap-11 hidden lg:block">
+                    <ul class="flex gap-10 text-lg font-medium ">
+                        <li><a href="index.html" class="hover:text-green-700">Home</a></li>
+                        <li><a href="abou_us.html" class="hover:text-green-700">About Us</a></li>
+                        <li class="relative group">
+                            <a href="" class="hover:text-green-700">Bikes
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" class=" inline-block"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 16a1 1 0 0 1-.71-.29l-6-6a1 1 0 0 1 1.42-1.42l5.29 5.3 5.29-5.29a1 1 0 0 1 1.41 1.41l-6 6a1 1 0 0 1-.7.29z"
+                                        data-name="16" data-original="#000000"></path>
+                                </svg>
+                            </a>
+                            <ul
+                                class="absolute bg-green-500 min-w-[250px] group-hover:max-h-[700px]  rounded-2xl top-10 laft-0 space-y-2 shadow-lg text-white max-h-0 overflow-hidden px-5 group-hover:pb-4 group-hover:pt-4 transition-all duration-500">
+                                <li><a href="bike_list.html" class="hover:text-gray-800">Bike lists</a></li>
+                                <li><a href="bike_type.html" class="hover:text-gray-800">Bike Type</a></li>
+                                <li><a href="bike_single.html" class="hover:text-gray-800">Bike Single</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contact_us.html" class="hover:text-green-700">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class=" lg:flex gap-4 items-center hidden">
+                    <button class="bg-green-600 py-[13px] px-5 rounded-full text-white">
+                        Book a Rental
+                    </button>
+                    <div>
+                        <img src="img/arrow-right-24.png" alt="" class="p-3 bg-green-600 rounded-full">
+                    </div>
+                </div>
+                <button class="p-2 lg:hidden" onclick="handleMenu()">
+                    <i class="fa-solid fa-bars fa-xl"></i>
+                </button>
+      
+      
+                <div id="nav_dialog" class="fixed h-[300px] w-screen bg-white inset-0 py-6 px-3 hidden">
+                    <div id="nav_bar" class="flex justify-between">
+                        <div>
+                            <img src="img/logo.svg" alt="" class="h-[33.44px] w-[180px]">
+                        </div>
+                        <button class="p-2 lg:hidden" onclick="handleMenu()">
+                            <i class="fa-solid fa-xmark fa-xl text-gray-600"></i>
+                        </button>
+                    </div>
+                    <div class="mt-6">
+                        <ul class=" flex flex-col gap-3 text-lg font-medium ">
+                            <li><a href="index.html" class="hover:text-green-700">Home</a></li>
+                            <li><a href="abou_us.html" class="hover:text-green-700">About Us</a></li>
+                            <li class="relative group">
+                                <a href="" class="hover:text-green-700">Bikes
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" class=" inline-block"
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 16a1 1 0 0 1-.71-.29l-6-6a1 1 0 0 1 1.42-1.42l5.29 5.3 5.29-5.29a1 1 0 0 1 1.41 1.41l-6 6a1 1 0 0 1-.7.29z"
+                                            data-name="16" data-original="#000000"></path>
+                                    </svg>
+                                </a>
+                                <ul
+                                    class="absolute bg-green-500 min-w-[250px] group-hover:max-h-[700px]  rounded-2xl top-10 laft-0 space-y-2 shadow-lg text-white max-h-0 overflow-hidden px-5 group-hover:pb-4 group-hover:pt-4 transition-all duration-500">
+                                    <li><a href="bike_list.html" class="hover:text-gray-800">Bike lists</a></li>
+                                    <li><a href="bike_type.html" class="hover:text-gray-800">Bike Type</a></li>
+                                    <li><a href="bike_single.html" class="hover:text-gray-800">Bike Single</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="contact_us.html" class="hover:text-green-700">Contact Us</a></li>
+                        </ul> 
+                    </div>
+                    <div class="mt-1">
+                    <p class="py-3 px-4 bg-green-600 text-center rounded-lg">Book A Rental</p>
+                    </div>
+      
+                </div>
+            </nav>
+        </header>
+      
+      
+        <script>
+            const navDialog = document.getElementById('nav_dialog');
+            function handleMenu() {
+                navDialog.classList.toggle('hidden');
+            }
+        </script>
+        
+      </section>
+
+     <!-- header part end -->
+
+     <!-- second section start -->
+
+     <section>
+        <div class="relative z-0">
+          <div class="relative">
+            <img src="img/bg.jpg" alt="hero background" class="lg:rounded-2xl w-[100%] h-[36rem] lg:h-[52rem] xl:h-[50rem] object-cover">
+          </div>
+          <div class="absolute bg-[#00000095] lg:rounded-2xl top-0 left-0 bottom-0 right-0"></div>
+          <div class="absolute right-0 left-0 top-24 flex flex-col items-center justify-center text-center mx-4 sm:mx-10 md:mx-22">
+            <h6 class="text-green-500 font-bold text-lg">Welcome To Car Rent</h6>
+            <h1 class="font-bold text-3xl max-w-4xl md:text-7xl mt-4 text-white leading-8">
+              Want to save even more on your next rental Bike?
+            </h1>
+           
+            <div class="flex flex-col sm:flex-row gap-6 items-center justify-center mt-8">
+              <div>
+                <a href="#" class="flex items-center justify-end group gap-3">
+                  <span class="border bg-green-500 py-2 px-6 rounded-full text-white text-lg font-medium border-none">
+                    Book a Rental
+                  </span>
+  
+                  <span class="bg-green-500 w-[3rem] h-[3rem] rounded-full flex items-center justify-center relative">
+                    <img src="img/arrow-right-24.png" class="w-6 h-6 text-white">
+                    
+                  </span>
+                </a>
+              </div>
+              <div>
+                <a href="#" class="flex items-center justify-end group gap-3">
+                  <span class="border bg-white py-2 px-6 rounded-full text-black text-lg font-medium border-none">
+                    Learn More
+                  </span>
+  
+                  <span class="bg-gray-400 w-[3rem] h-[3rem] rounded-full flex items-center justify-center relative">
+                    <img src="img/arrow-right-24.png" class="w-9 h-9 text-white">
+                    
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="hidden xl:grid mt-40 w-full lg:h-[9rem] xl:h-[8rem]  grid-cols-[1fr_1fr_1fr_1fr_1fr_1fr] items-center justify-between gap-4 rounded-2xl bg-white">
+              <div>
+                <h2 class="text-xl font-bold text-left xl:px-3 border-r border-grey-100">
+                  Need to Rent a Luxury Bike?
+                </h2>
+              </div>
+              <div class="flex flex-col items-start justify-start text-left xl:px-3 border-r border-grey-100">
+                <label for="fullName" class="mb-2 text-lg font-semibold">Full Name</label>
+                <input id="fullName" placeholder="Enter Full Name">
+              </div>
+              <div class="flex flex-col items-start justify-start text-left xl:px-3 border-r border-grey-100">
+                <label for="mobile" class="mb-2 text-lg font-semibold">Mobile No</label>
+                <input id="mobile" placeholder="Enter Phone No">
+              </div>
+              <div class="flex flex-col items-start justify-start text-left xl:px-3 border-r border-grey-100">
+                <label for="pickup" class="mb-2 text-lg font-semibold">Pickup Location</label>
+                <input id="pickup" placeholder="Enter Location">
+              </div>
+              <div class="flex flex-col items-start justify-start text-left xl:px-3 border-r border-grey-100">
+                <label for="date" class="mb-2 text-lg font-semibold">Pickup Date</label>
+                <input id="date" placeholder="mm/dd/yyyy">
+              </div>
+              <div>
+                <button class="border bg-green-500 py-2 px-6 rounded-full text-white text-lg font-medium border-none">
+                  Send
+                </button>
+              </div>
+            </div>
+            <div class="hidden md:h-[10rem] lg:flex xl:hidden lg:flex-col items-center rounded-2xl bg-white justify-start mt-40">
+              <div class="flex flex-row justify-start w-full">
+                <h2 class="text-xl font-bold text-black py-2 ml-4">
+                  Need to Rent a Luxury Car?
+                </h2>
+              </div>
+  
+              <div class="lg:h-[8rem] xl:h-[8rem] grid grid-cols-[1fr_1fr_1fr_1fr_1fr] items-center justify-between gap-4">
+                <div class="ml-4 flex flex-col items-start justify-start text-left lg:px-1 border-r border-grey-100">
+                  <label for="fullName" class="mb-2 text-lg font-semibold">Full Name</label>
+                  <input id="fullName" placeholder="Enter Full Name">
+                </div>
+                <div class="flex flex-col items-start justify-start text-left lg:px-1 border-r border-grey-100">
+                  <label for="mobile" class="mb-2 text-lg font-semibold">Mobile No</label>
+                  <input id="mobile" placeholder="Enter Phone No">
+                </div>
+                <div class="flex flex-col items-start justify-start text-left lg:px-1 border-r border-grey-100">
+                  <label for="pickup" class="mb-2 text-lg font-semibold">Pickup Location</label>
+                  <input id="pickup" placeholder="Enter Location">
+                </div>
+                <div class="flex flex-col items-start justify-start text-left lg:px-1 border-r border-grey-100">
+                  <label for="date" class="mb-2 text-lg font-semibold">Pickup Date</label>
+                  <input id="date" placeholder="mm/dd/yyyy">
+                </div>
+                <div>
+                  <button class="border bg-blue-500 py-2 px-6 rounded-full text-white text-lg font-medium border-none">
+                    Send
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="h-[31rem] sm:h-[20rem] w-[97%] mx-auto lg:hidden flex flex-col rounded-2xl bg-white mt-10">
+          <div class="flex flex-row justify-start mb-7 w-full">
+            <h2 class="text-xl font-bold text-black py-2 ml-4">
+              Need to Rent a Luxury Car?
+            </h2>
+          </div>
+  
+          <div class="flex flex-col sm:flex-row items-start">
+            <div class="ml-4 sm:w-[50%] flex flex-col items-start justify-start text-left sm:border-r sm:border-gray-100 sm:pr-4 sm:border-b-0 w-[93%] border-b pb-2 mb-5 border-gray-300">
+              <label for="fullName" class="mb-2 text-lg font-semibold">Full Name</label>
+              <input id="fullName" placeholder="Enter Full Name" class="focus:outline-none w-full">
+            </div>
+  
+            <div class="ml-4 sm:w-[50%] flex flex-col items-start justify-start text-left sm:pr-4 w-[93%] sm:border-b-0 border-b pb-2 mb-5 border-gray-300">
+              <label for="mobile" class="mb-2 text-lg font-semibold">Mobile No</label>
+              <input id="mobile" placeholder="Enter Phone No" class="w-full focus:outline-none">
+            </div>
+          </div>
+          <div class="flex flex-col sm:flex-row items-start">
+            <div class="ml-4 sm:w-[50%] flex flex-col items-start justify-start text-left sm:border-r sm:border-gray-100 sm:pr-4 sm:border-b-0 w-[93%] border-b pb-2 mb-5 border-gray-300">
+              <label for="pickup" class="mb-2 text-lg font-semibold">Pickup Location</label>
+              <input id="pickup" placeholder="Enter Location" class="focus:outline-none w-full">
+            </div>
+  
+            <div class="ml-4 sm:w-[50%] flex flex-col items-start justify-start text-left sm:pr-4 w-[93%] sm:border-b-0 border-b pb-2 mb-5 border-gray-300">
+              <label for="date" class="mb-2 text-lg font-semibold">Pickup Date</label>
+              <input id="date" placeholder="mm/dd/yyyy" class="w-full focus:outline-none">
+            </div>
+          </div>
+  
+          <div class="flex flex-row justify-start w-full mt-4">
+            <button class="border bg-blue-500 py-2 px-6 ml-4 rounded-full text-white text-lg font-medium border-none">
+              Send
+            </button>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- second section end -->
+    
+
+      <!-- about us section start -->
+
+    <section>
+        <div class="grid grid-cols-1 lg:grid-cols-2 mt-10 gap-20 lg:gap-0">
+            <div class="relative mb-40 px-4">
+                <div class="lg:w-[300px] lg:h-[140px] w-[200px] h-[50px]">
+                    <img src="img/ladie2.jpg" alt="" class="rounded-full">
+                </div>
+                <div class="lg:w-[300px] lg:h-[140px] w-[200px] h-[50px] absolute lg:left-60 lg:top-64 left-32 top-20">
+                    <img src="img/ladie1.jpg" alt="" class="rounded-full">
+                </div>
+            </div>
+            <div class="mt-36 lg:mt-0 px-4 lg:px-0">
+                <h6 class="text-green-600 lg:text-lg font-semibold">About Us</h6>
+                <h1 class="lg:text-5xl text-3xl font-bold my-6">Your dependable choice for hassle-free car rentals</h1>
+                <p class="text-gray-400 my-6">Aqestic Optio Amet A Ququam Saepe Aliquid Voluate Dicta Fuga Dolor Saerror Sed Earum A Magni Soluta Quam Minus Dolor Dolor</p>
+                <div class="flex items-center gap-10 group">
+                    <div class="relative">
+                        <div class="relative left-0 top-0 w-[60px] h-[60px] opacity-5 z-0 rounded-full bg-green-500 group-hover:opacity-70" ></div>
+                        <img src="img/motor_icon.png" alt="" class="w-74 h-75 top-3 left-2 absolute">
+                    </div>
+                    <div class="px-3">
+                        <h3 class="text-xl font-bold py-4">Easy Booking Process</h3>
+                        <p class="text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos adipisci placeat id sunt omnis laborum ad non doloribus magni pariatur?
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-10 group my-9">
+                    <div class="relative">
+                        <div class="relative left-0 top-0 w-[60px] h-[60px] opacity-5 z-0 rounded-full bg-green-500 group-hover:opacity-70" ></div>
+                        <img src="img/motor_icon.png" alt="" class="w-74 h-75 top-3 left-2 absolute">
+                    </div>
+                    <div class="px-3">
+                        <h3 class="text-xl font-bold py-4">Easy Booking Process</h3>
+                        <p class="text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos adipisci placeat id sunt omnis laborum ad non doloribus magni pariatur?
+                        </p>
+                    </div>
+                </div>
+                <div class="flex gap-3">
+                    <button class="bg-green-600 py-[13px] px-5 rounded-full text-white">
+                        Book a Rental
+                    </button>
+                    <div>
+                        <img src="img/arrow-right-24.png" alt="" class="p-3 bg-green-600 rounded-full">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+       <!-- about us section end -->
+
+       <!-- services section start -->
+        <section class="bg-[#fff8f6] py-20 lg:mt-40 px-3">
+            <div class="flex flex-col items-center justify-center">
+                <h3 class="text-green-600 text-xl font-semibold pb-3">Our Services</h3>
+                <h1 class="lg:text-5xl text-3xl font-extrabold text-center">Discover our extensive selection of <br>
+                    rental services</h1>
+                    <div class="grid grid-cols-1 md:grid-cols-4 mt-20 px-3 gap-4">
+                        <div class="group bg-white px-3 py-4 h-80 border border[1px] rounded-xl flex flex-col gap-7 hover:bg-green-500 transition duration-300">
+                            <div class="relative">
+                                <div class=" left-0 top-0 w-[60px] h-[60px] opacity-5 z-0 rounded-full bg-green-500 group-hover:opacity-70" ></div>
+                                <img src="img/motor_icon.png" alt="" class="w-[60px] h-[70px] absolute top-1 left-2">
+                            </div>
+                            <h2 class="font-bold text-xl">Car Rental With Driver</h2>
+                            <p class="text-gray-500">Enhance your rental experience with additional options.</p>
+                            <div>
+                                <img src="img/arrow-right-24.png" alt="" class="p-3 bg-green-600 rounded-full">
+                            </div>
+                        </div>
+                        <div class="group bg-white p-5 h-80 border border[1px] rounded-xl flex flex-col gap-7 hover:bg-green-500 transition duration-300">
+                            <div class="relative">
+                                <div class=" left-0 top-0 w-[60px] h-[60px] opacity-5 z-0 rounded-full bg-green-500 group-hover:opacity-70" ></div>
+                                <img src="img/motor_icon.png" alt="" class="w-[60px] h-[70px] absolute top-1 left-2">
+                            </div>
+                            <h2 class="font-bold text-xl">Car Rental With Driver</h2>
+                            <p class="text-gray-500">Enhance your rental experience with additional options.</p>
+                            <div>
+                                <img src="img/arrow-right-24.png" alt="" class="p-3 bg-green-600 rounded-full">
+                            </div>
+                        </div>
+                        <div class="group bg-white p-5 h-80 border border[1px] rounded-xl flex flex-col gap-7 hover:bg-green-500 transition duration-300">
+                            <div class="relative">
+                                <div class=" left-0 top-0 w-[60px] h-[60px] opacity-5 z-0 rounded-full bg-green-500 group-hover:opacity-70" ></div>
+                                <img src="img/motor_icon.png" alt="" class="w-[60px] h-[70px] absolute top-1 left-2">
+                            </div>
+                            <h2 class="font-bold text-xl">Car Rental With Driver</h2>
+                            <p class="text-gray-500">Enhance your rental experience with additional options.</p>
+                            <div>
+                                <img src="img/arrow-right-24.png" alt="" class="p-3 bg-green-600 rounded-full">
+                            </div>
+                        </div>
+                        <div class="group bg-white p-5 h-80 border border[1px] rounded-xl flex flex-col gap-7 hover:bg-green-500 transition duration-300">
+                            <div class="relative">
+                                <div class=" left-0 top-0 w-[60px] h-[60px] opacity-5 z-0 rounded-full bg-green-500 group-hover:opacity-70" ></div>
+                                <img src="img/motor_icon.png" alt="" class="w-[60px] h-[70px] absolute top-1 left-2">
+                            </div>
+                            <h2 class="font-bold text-xl">Car Rental With Driver</h2>
+                            <p class="text-gray-500">Enhance your rental experience with additional options.</p>
+                            <div>
+                                <img src="img/arrow-right-24.png" alt="" class="p-3 bg-green-600 rounded-full">
+                            </div>
+                        </div>
+                    </div>
+                    <p class="mt-14 text-center lg:px-30 w-[50%] text-lg text-gray-400">Discover our range of car rental services designed to meet all your travel needs. From a diverse fleet of vehicles to flexible rental plans.</p>
+                    <div class="flex gap-3 mt-6">
+                        <button class="bg-green-600 py-[13px] px-5 rounded-full text-white">
+                            Book a Rental
+                        </button>
+                        <div>
+                            <img src="img/arrow-right-24.png" alt="" class="p-3 bg-green-600 rounded-full">
+                        </div>
+                    </div>
+            </div>
+        </section>
+
+        <!-- services section end -->
+
+        <!-- our fleet section start -->
+        <section>
+            <div class="flex flex-col items-center mt-16 w-full px-3">
+                <h3 class="font-semibold text-green-500 capitalize">Our fleets</h3>
+                <h1 class="text-5xl font-bold my-5">Explore our perfect and extensive fleet</h1>
+                <div class="grid lg:grid-cols-4 grid-cols-1 mt-7 gap-5">
+                    <div class="items-start flex flex-col border-[1px] gap-y-4 py-6 rounded-2xl">
+                        <div class="items-center justify-center mx-auto">
+                            <img src="img/motorcyle.jpg" alt="" class="w-[200px] h-[200px]">
+                        </div>
+                        <div class=" px-3">
+                            <span class="bg-gray-100 rounded-full px-2 py-1">Luxury Bike</span>
+                            <h1 class="font-semibold text-2xl my-4">Royel Enfield</h1>
+                        </div>
+                        <div class="flex flex-row w-full justify-between items-center px-3">
+                            <div class="flex gap-2">
+                                <img src="img/chain.png" alt="" class="w-[20px]">
+                                <p class="text-gray-700 text-lg"> Chain </p>
+                            </div>
+                            <p>6</p>
+                        </div>
+                        <div class="flex flex-row w-full justify-between items-center px-3">
+                            <div class="flex gap-2">
+                                <img src="img/piston.png" alt="" class="w-[20px]">
+                                <p class="text-gray-700 text-lg">Piston</p>
+                            </div>
+                            <p>6</p>
+                        </div>
+                        <hr class="w-72 mx-auto">
+                        <div class="flex flex-row justify-between items-center w-full px-3 mt-3">
+                            <h1 class="font-bold text-xl">$255 <span class="text-gray-500 font-normal">/per day</span></h1>
+                            <div>
+                                <img src="img/arrow-right-24.png" alt="" class="p-3 bg-green-600 rounded-full">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="items-start flex flex-col border-[1px] gap-y-4 py-6 rounded-2xl">
+                        <div class="items-center justify-center mx-auto">
+                            <img src="img/motorcyle.jpg" alt="" class="w-[200px] h-[200px]">
+                        </div>
+                        <div class=" px-3">
+                            <span class="bg-gray-100 rounded-full px-2 py-1">Luxury Bike</span>
+                            <h1 class="font-semibold text-2xl my-4">Royel Enfield</h1>
+                        </div>
+                        <div class="flex flex-row w-full justify-between items-center px-3">
+                            <div class="flex gap-2">
+                                <img src="img/chain.png" alt="" class="w-[20px]">
+                                <p class="text-gray-700 text-lg"> Chain </p>
+                            </div>
+                            <p>6</p>
+                        </div>
+                        <div class="flex flex-row w-full justify-between items-center px-3">
+                            <div class="flex gap-2">
+                                <img src="img/piston.png" alt="" class="w-[20px]">
+                                <p class="text-gray-700 text-lg">Piston</p>
+                            </div>
+                            <p>6</p>
+                        </div>
+                        <hr class="w-72 mx-auto">
+                        <div class="flex flex-row justify-between items-center w-full px-3 mt-3">
+                            <h1 class="font-bold text-xl">$255 <span class="text-gray-500 font-normal">/per day</span></h1>
+                            <div>
+                                <img src="img/arrow-right-24.png" alt="" class="p-3 bg-green-600 rounded-full">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="items-start flex flex-col border-[1px] gap-y-4 py-6 rounded-2xl">
+                        <div class="items-center justify-center mx-auto">
+                            <img src="img/motorcyle.jpg" alt="" class="w-[200px] h-[200px]">
+                        </div>
+                        <div class=" px-3">
+                            <span class="bg-gray-100 rounded-full px-2 py-1">Luxury Bike</span>
+                            <h1 class="font-semibold text-2xl my-4">Royel Enfield</h1>
+                        </div>
+                        <div class="flex flex-row w-full justify-between items-center px-3">
+                            <div class="flex gap-2">
+                                <img src="img/chain.png" alt="" class="w-[20px]">
+                                <p class="text-gray-700 text-lg"> Chain </p>
+                            </div>
+                            <p>6</p>
+                        </div>
+                        <div class="flex flex-row w-full justify-between items-center px-3">
+                            <div class="flex gap-2">
+                                <img src="img/piston.png" alt="" class="w-[20px]">
+                                <p class="text-gray-700 text-lg">Piston</p>
+                            </div>
+                            <p>6</p>
+                        </div>
+                        <hr class="w-72 mx-auto">
+                        <div class="flex flex-row justify-between items-center w-full px-3 mt-3">
+                            <h1 class="font-bold text-xl">$255 <span class="text-gray-500 font-normal">/per day</span></h1>
+                            <div>
+                                <img src="img/arrow-right-24.png" alt="" class="p-3 bg-green-600 rounded-full">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="items-start flex flex-col border-[1px] gap-y-4 py-6 rounded-2xl">
+                        <div class="items-center justify-center mx-auto">
+                            <img src="img/motorcyle.jpg" alt="" class="w-[200px] h-[200px]">
+                        </div>
+                        <div class=" px-3">
+                            <span class="bg-gray-100 rounded-full px-2 py-1">Luxury Bike</span>
+                            <h1 class="font-semibold text-2xl my-4">Royel Enfield</h1>
+                        </div>
+                        <div class="flex flex-row w-full justify-between items-center px-3">
+                            <div class="flex gap-2">
+                                <img src="img/chain.png" alt="" class="w-[20px]">
+                                <p class="text-gray-700 text-lg"> Chain </p>
+                            </div>
+                            <p>6</p>
+                        </div>
+                        <div class="flex flex-row w-full justify-between items-center px-3">
+                            <div class="flex gap-2">
+                                <img src="img/piston.png" alt="" class="w-[20px]">
+                                <p class="text-gray-700 text-lg">Piston</p>
+                            </div>
+                            <p>6</p>
+                        </div>
+                        <hr class="w-72 mx-auto">
+                        <div class="flex flex-row justify-between items-center w-full px-3 mt-3">
+                            <h1 class="font-bold text-xl">$255 <span class="text-gray-500 font-normal">/per day</span></h1>
+                            <div>
+                                <img src="img/arrow-right-24.png" alt="" class="p-3 bg-green-600 rounded-full">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 mt-9">
+                    <div>
+                        <img src="img/arrow-left-32.png" alt="" class="p-3 bg-green-600 rounded-full w-14">
+                    </div>
+                    <div>
+                        <img src="img/arrow-right-24.png" alt="" class="p-3 bg-green-600 rounded-full w-14">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- our fleet section end -->
+
+         <!-- car show section start -->
+        <section>
+            <div class="mt-20">
+                <h1 class="text-center text-5xl font-bold">Bike Show</h1>
+                <div class="grid lg:grid-cols-4 grid-cols-1 mt-20 gap-4 px-5 lg:px-0yyyy">
+                    <div class="relative">
+                        <img src="img/motor1.jpg" alt="" class="border[1px] rounded-3xl">
+                        <h1 class="absolute top-0 left-24 text-3xl font-bold text-white">Sport Bike</h1>
+                        <div class="absolute bottom-5 right-5">
+                            <img src="img/arrow-right-24.png" alt="" class="p-3 bg-green-600 rounded-full">
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="img/motor2.jpg" alt="" class="border[1px] rounded-3xl">
+                        <h1 class="absolute top-0 left-24 text-3xl font-bold text-white">Sport Bike</h1>
+                        <div class="absolute bottom-5 right-5">
+                            <img src="img/arrow-right-24.png" alt="" class="p-3 bg-green-600 rounded-full">
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="img/motor3.jpg" alt="" class="border[1px] rounded-3xl">
+                        <h1 class="absolute top-0 left-24 text-3xl font-bold text-white">Sport Bike</h1>
+                        <div class="absolute bottom-5 right-5">
+                            <img src="img/arrow-right-24.png" alt="" class="p-3 bg-green-600 rounded-full">
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="img/motor4.jpg" alt="" class="border[1px] rounded-3xl">
+                        <h1 class="absolute top-0 left-24 text-3xl font-bold text-white">Sport Bike</h1>
+                        <div class="absolute bottom-5 right-5">
+                            <img src="img/arrow-right-24.png" alt="" class="p-3 bg-green-600 rounded-full">
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+          <!-- car show section end -->
+
+          <!-- how it work section start -->
+        <section>
+            <div class="grid lg:grid-cols-2 grid-cols-1 gap-7 lg:gap-0 items-center justify-between mt-28 px-4 my-10 ">
+                <div class=" flex flex-col gap-6">
+                    <p class="text-lg text-green-500 font-medium">How It Work</p>
+                    <h1 class="text-5xl font-extrabold">Streamlined processes for a hassle-free experience</h1>
+                    <p class="text-gray-400 text-base mb-6">Our streamlined process ensures a seamless car rental experience from start to finish. With easy online booking, flexible pick-up and drop-off options.</p>
+                    <div class="flex justify-between p-2 border rounded-xl shadow-md text-xl py-4 font-semibold">
+                        <p>Browse And Select</p>
+                        <span>+</span>
+                    </div>
+                    <div class="flex justify-between p-2 border rounded-xl shadow-md text-xl py-4 font-semibold">
+                        <p>Book and Confirm</p>
+                        <span>+</span>
+                    </div>
+                    <div class="flex justify-between p-2 border rounded-xl shadow-md text-xl py-4 font-semibold">
+                        <p>Can I Rent A Bike With A Debit Card?</p>
+                        <span>+</span>
+                    </div>
+                </div>
+                <div class=" relative">
+                    <img src="img/girl bike.jpg" alt="" class=" w-80 rounded-full mx-auto h-full">
+                    <div class="absolute right-10 bottom-5" >
+                        <div class="bg-green-600 w-48 h-44 flex flex-col px-4 py-2 rounded-xl">
+                            <h2 class="text-white font-bold text-xl pb-3 border-b-2"> 5 m+ Trusted world wide global clients</h2>
+                            <img src="img/trusted-client-img.png" alt="" class="py-3 px-2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+           <!-- how it work section end -->
+
+           <!-- bike video section start -->
+
+        <section class="px-3 lg:px-0">
+        
+                <div class="relative flex items-center justify-center my-20"> 
+                    <img src="img/video bike.jpg" alt="" class="h-[500px] w-[100%] rounded-2xl">
+                    <p class="absolute top-10 text-green-600 text-xl font-bold z-10">Watch Full Video</p>
+                    <h1 class="absolute top-20 mx-auto z-10 lg:text-6xl text-3xl px-14 lg:px-36 text-center text-white font-bold">Experience the simplicity and convenience of renting with us</h1>
+                    <div class="absolute bg-[#00000095] rounded-2xl top-0 left-0 right-0 bottom-0 "></div>
+
+                    <button class="w-16 absolute z-10 bg-green-500 rounded-full p-4 mt-14">
+                        <img src="img/arrow-play-64.png" alt="">
+                    </button>
+                    <div class="flex items-center absolute bottom-10 gap-4 z-10 border-t-2 border-gray-400 justify-around lg:w-[800px] pt-9">
+                        <img src="img/pngwing.com (1).png" alt="" class="w-24 text-gray-500">
+                        <img src="img/pngegg (1).png" alt="" class="w-24">
+                        <img src="img/Daco_4655432 (1).png" alt="" class="w-24">
+                    </div>
+                </div>
+            
+        </section>
+
+            <!-- bike video section end -->
+
+            <!-- Why Choose Us section start -->
+
+            <section class="bg-gray-100 p-10">
+                <div class="text-center flex flex-col gap-4">
+                    <p class="text-green-600 font-semibold text-lg">Why Choose Us</p>
+                    <h1 class="lg:text-6xl text-3xl text-center px-35 font-bold">Discover the ease and convenience of renting with Us</h1>
+                </div>
+                <div class="grid lg:grid-cols-3 grid-cols-1 gap-6 lg:gap-0 items-center justify-center mt-9">
+                    <div class="flex flex-col gap-10">
+                        <div class="flex gap-8 group">
+                            <div class="relative">
+                                <div class="w-[35px] h-[35px] bg-green-600 opacity-10 rounded-full relative group-hover:opacity-70"></div>
+                                <img src="img/motor_icon.png" alt="" class="w-[33px] h-[33px] absolute top-1 left-1">
+                            </div>
+                            <div>
+                                <h1 class="text-xl font-bold pb-2">Easy Booking prosess</h1>
+                                <p class="text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum suscipit necessitatibus iusto, labore dicta magni?</p>
+                            </div>
+                        </div>
+                        <hr class="border-gray-300">
+                        <div class="flex gap-8 group">
+                            <div class="relative">
+                                <div class="w-[35px] h-[35px] bg-green-600 opacity-10 rounded-full relative group-hover:opacity-70"></div>
+                                <img src="img/motor_icon.png" alt="" class="w-[33px] h-[33px] absolute top-1 left-1">
+                            </div>
+                            <div>
+                                <h1 class="text-xl font-bold pb-2">Easy Booking prosess</h1>
+                                <p class="text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum suscipit necessitatibus iusto, labore dicta magni?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative mx-auto">
+                        <img src="img/why-choose-img-2.jpg" alt="" class="rounded-full w-[100%] mx-auto">
+                        <img src="img/yamaha.png" alt="" class="absolute w-[200px] bottom-7 left-14">
+                    </div>
+                    <div class="flex flex-col gap-10">
+                        <div class="flex gap-8 group">
+                            <div class="relative">
+                                <div class="w-[35px] h-[35px] bg-green-600 opacity-10 rounded-full relative group-hover:opacity-70"></div>
+                                <img src="img/motor_icon.png" alt="" class="w-[33px] h-[33px] absolute top-1 left-1">
+                            </div>
+                            <div>
+                                <h1 class="text-xl font-bold pb-2">Easy Booking prosess</h1>
+                                <p class="text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum suscipit necessitatibus iusto, labore dicta magni?</p>
+                            </div>
+                        </div>
+                        <hr class="border-gray-300">
+                        <div class="flex gap-8 group">
+                            <div class="relative">
+                                <div class="w-[35px] h-[35px] bg-green-600 opacity-10 rounded-full relative group-hover:opacity-70"></div>
+                                <img src="img/motor_icon.png" alt="" class="w-[33px] h-[33px] absolute top-1 left-1">
+                            </div>
+                            <div>
+                                <h1 class="text-xl font-bold pb-2">Easy Booking prosess</h1>
+                                <p class="text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum suscipit necessitatibus iusto, labore dicta magni?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+             <!-- Why Choose Us section end -->
+
+             <!-- bike servicess details start -->
+
+            <section class=" my-14">
+                <div class="relative hidden lg:block">
+                    <img src="img/harley.jpg" alt="" class="w-[100%] h-[300px] bg-cover bg-center">
+                    <div class=" absolute bg-[#000000ea]  top-0 left-0 right-0 bottom-0"></div>
+                    <div class="absolute flex justify-around w-full bottom-[50%] top-[50%] items-center">
+                        <div class="text-white flex flex-col items-center gap-2">
+                            <svg class="w-[46px] h-[46px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#1ae000" d="M280 32c-13.3 0-24 10.7-24 24s10.7 24 24 24l57.7 0 16.4 30.3L256 192l-45.3-45.3c-12-12-28.3-18.7-45.3-18.7L64 128c-17.7 0-32 14.3-32 32l0 32 96 0c88.4 0 160 71.6 160 160c0 11-1.1 21.7-3.2 32l70.4 0c-2.1-10.3-3.2-21-3.2-32c0-52.2 25-98.6 63.7-127.8l15.4 28.6C402.4 276.3 384 312 384 352c0 70.7 57.3 128 128 128s128-57.3 128-128s-57.3-128-128-128c-13.5 0-26.5 2.1-38.7 6L418.2 128l61.8 0c17.7 0 32-14.3 32-32l0-32c0-17.7-14.3-32-32-32l-20.4 0c-7.5 0-14.7 2.6-20.5 7.4L391.7 78.9l-14-26c-7-12.9-20.5-21-35.2-21L280 32zM462.7 311.2l28.2 52.2c6.3 11.7 20.9 16 32.5 9.7s16-20.9 9.7-32.5l-28.2-52.2c2.3-.3 4.7-.4 7.1-.4c35.3 0 64 28.7 64 64s-28.7 64-64 64s-64-28.7-64-64c0-15.5 5.5-29.7 14.7-40.8zM187.3 376c-9.5 23.5-32.5 40-59.3 40c-35.3 0-64-28.7-64-64s28.7-64 64-64c26.9 0 49.9 16.5 59.3 40l66.4 0C242.5 268.8 190.5 224 128 224C57.3 224 0 281.3 0 352s57.3 128 128 128c62.5 0 114.5-44.8 125.8-104l-66.4 0zM128 384a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"/></svg>
+                            <h2 class="text-3xl font-bold">2000</h2>
+                            <p>Rental Motorcycles</p>
+                        </div>
+                        <div class=" text-white flex flex-col items-center gap-1.5">
+                            <svg class="w-[46px] h-[46px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#08dd16" d="M320 96L192 96 144.6 24.9C137.5 14.2 145.1 0 157.9 0L354.1 0c12.8 0 20.4 14.2 13.3 24.9L320 96zM192 128l128 0c3.8 2.5 8.1 5.3 13 8.4C389.7 172.7 512 250.9 512 416c0 53-43 96-96 96L96 512c-53 0-96-43-96-96C0 250.9 122.3 172.7 179 136.4c0 0 0 0 0 0s0 0 0 0c4.8-3.1 9.2-5.9 13-8.4zm84 88c0-11-9-20-20-20s-20 9-20 20l0 14c-7.6 1.7-15.2 4.4-22.2 8.5c-13.9 8.3-25.9 22.8-25.8 43.9c.1 20.3 12 33.1 24.7 40.7c11 6.6 24.7 10.8 35.6 14l1.7 .5c12.6 3.8 21.8 6.8 28 10.7c5.1 3.2 5.8 5.4 5.9 8.2c.1 5-1.8 8-5.9 10.5c-5 3.1-12.9 5-21.4 4.7c-11.1-.4-21.5-3.9-35.1-8.5c-2.3-.8-4.7-1.6-7.2-2.4c-10.5-3.5-21.8 2.2-25.3 12.6s2.2 21.8 12.6 25.3c1.9 .6 4 1.3 6.1 2.1c0 0 0 0 0 0s0 0 0 0c8.3 2.9 17.9 6.2 28.2 8.4l0 14.6c0 11 9 20 20 20s20-9 20-20l0-13.8c8-1.7 16-4.5 23.2-9c14.3-8.9 25.1-24.1 24.8-45c-.3-20.3-11.7-33.4-24.6-41.6c-11.5-7.2-25.9-11.6-37.1-15c0 0 0 0 0 0l-.7-.2c-12.8-3.9-21.9-6.7-28.3-10.5c-5.2-3.1-5.3-4.9-5.3-6.7c0-3.7 1.4-6.5 6.2-9.3c5.4-3.2 13.6-5.1 21.5-5c9.6 .1 20.2 2.2 31.2 5.2c10.7 2.8 21.6-3.5 24.5-14.2s-3.5-21.6-14.2-24.5c-6.5-1.7-13.7-3.4-21.1-4.7l0-13.9z"/></svg>
+                            <h2 class="text-3xl font-bold">800,000</h2>
+                            <p>Rental Amount</p>
+                        </div>
+                        <div class=" text-white flex flex-col items-center gap-1.5">
+                            <svg class="w-[46px] h-[46px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#0fe000" d="M72 88a56 56 0 1 1 112 0A56 56 0 1 1 72 88zM64 245.7C54 256.9 48 271.8 48 288s6 31.1 16 42.3l0-84.7zm144.4-49.3C178.7 222.7 160 261.2 160 304c0 34.3 12 65.8 32 90.5l0 21.5c0 17.7-14.3 32-32 32l-64 0c-17.7 0-32-14.3-32-32l0-26.8C26.2 371.2 0 332.7 0 288c0-61.9 50.1-112 112-112l32 0c24 0 46.2 7.5 64.4 20.3zM448 416l0-21.5c20-24.7 32-56.2 32-90.5c0-42.8-18.7-81.3-48.4-107.7C449.8 183.5 472 176 496 176l32 0c61.9 0 112 50.1 112 112c0 44.7-26.2 83.2-64 101.2l0 26.8c0 17.7-14.3 32-32 32l-64 0c-17.7 0-32-14.3-32-32zm8-328a56 56 0 1 1 112 0A56 56 0 1 1 456 88zM576 245.7l0 84.7c10-11.3 16-26.1 16-42.3s-6-31.1-16-42.3zM320 32a64 64 0 1 1 0 128 64 64 0 1 1 0-128zM240 304c0 16.2 6 31 16 42.3l0-84.7c-10 11.3-16 26.1-16 42.3zm144-42.3l0 84.7c10-11.3 16-26.1 16-42.3s-6-31.1-16-42.3zM448 304c0 44.7-26.2 83.2-64 101.2l0 42.8c0 17.7-14.3 32-32 32l-64 0c-17.7 0-32-14.3-32-32l0-42.8c-37.8-18-64-56.5-64-101.2c0-61.9 50.1-112 112-112l32 0c61.9 0 112 50.1 112 112z"/></svg>
+                            <h2 class="text-3xl font-bold">100%</h2>
+                            <p>Customer Satisfaction</p>
+                        </div>
+                        <div class=" text-white flex flex-col items-center gap-1.5">
+                            <svg class="w-[46px] h-[46px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#1df500" d="M320 128c17.7 0 32-14.3 32-32s-14.3-32-32-32L192 64c-17.7 0-32 14.3-32 32s14.3 32 32 32l32 0 0 32-80 0-48 0-48 0c-26.5 0-48 21.5-48 48l0 64.8c0 19 11.2 36.2 28.5 43.9l67.5 30L96 368c0 26.5 21.5 48 48 48l259.1 0c18.4 0 35.8-7.9 48-21.7L633.5 187.7c12.3-13.9-.3-35.4-18.4-31.5L448 192l-50.5-25.2c-8.9-4.4-18.7-6.8-28.6-6.8L288 160l0-32 32 0zM96 208l0 86.1L48 272.8 48 208l48 0z"/></svg>
+                            <h2 class="text-3xl font-bold">3,500</h2>
+                            <p>Oil Changes</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+              <!-- bike servicess details end -->
+
+              <!-- how bkie rental work section start -->
+
+            <section class="px-3 lg:px-0 ">
+                <div class="my-32 flex flex-col gap-10">
+                    <div class="flex lg:flex-row flex-col items-center justify-between gap-3 lg:gap-0">
+                        <div class="flex flex-col gap-3">
+                            <h1 class="text-5xl font-bold">How bike ride rental <span class="text-green-600">works?</span></h1>
+                            <p class="font-semibold text-gray-600 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sapiente excepturi <br>corrupti repellat quo molestias officiis!</p>
+                        </div>
+                        <div>
+                            <button class="bg-green-600 px-6 py-2.5 rounded-3xl text-white">Book Ride</button>
+                        </div>
+                    </div>
+                    <div class="grid lg:grid-cols-4 grid-cols-1 gap-7">
+                        <div class="bg-gray-700 flex flex-col items-center justify-center  py-8 rounded-xl text-white">
+                            <svg class="w-[40px] h-[30px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#11d432" d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
+                            <h3 class="pt-1 text-xl font-bold capitalize">select location</h3>
+                            <p class="text-center text-sm w-60 text-gray-300 pt-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, fugit!</p>
+                        </div>
+                        <div class="bg-gray-700 flex flex-col items-center justify-center  py-8 rounded-xl text-white">
+                            <svg class="w-[40px] h-[30px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#14cc17" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+                            <h3 class="pt-1 text-xl font-bold capitalize">choose your ride</h3>
+                            <p class="text-center text-sm w-60 text-gray-300 pt-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, fugit!</p>
+                        </div>
+                        <div class="bg-gray-700 flex flex-col items-center justify-center  py-8 rounded-xl text-white">
+                            <svg class="w-[40px] h-[30px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#24cd18" d="M112 48a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm40 304l0 128c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-223.1L59.4 304.5c-9.1 15.1-28.8 20-43.9 10.9s-20-28.8-10.9-43.9l58.3-97c17.4-28.9 48.6-46.6 82.3-46.6l29.7 0c33.7 0 64.9 17.7 82.3 46.6l58.3 97c9.1 15.1 4.2 34.8-10.9 43.9s-34.8 4.2-43.9-10.9L232 256.9 232 480c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-128-16 0z"/></svg>
+                            <h3 class="pt-1 text-xl font-bold capitalize">book it online</h3>
+                            <p class="text-center text-sm w-60 text-gray-300 pt-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, fugit!</p>
+                        </div>
+                        <div class="bg-gray-700 flex flex-col items-center justify-center  py-8 rounded-xl text-white">
+                            <svg class="w-[40px] h-[30px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#18d115" d="M280 32c-13.3 0-24 10.7-24 24s10.7 24 24 24l57.7 0 16.4 30.3L256 192l-45.3-45.3c-12-12-28.3-18.7-45.3-18.7L64 128c-17.7 0-32 14.3-32 32l0 32 96 0c88.4 0 160 71.6 160 160c0 11-1.1 21.7-3.2 32l70.4 0c-2.1-10.3-3.2-21-3.2-32c0-52.2 25-98.6 63.7-127.8l15.4 28.6C402.4 276.3 384 312 384 352c0 70.7 57.3 128 128 128s128-57.3 128-128s-57.3-128-128-128c-13.5 0-26.5 2.1-38.7 6L418.2 128l61.8 0c17.7 0 32-14.3 32-32l0-32c0-17.7-14.3-32-32-32l-20.4 0c-7.5 0-14.7 2.6-20.5 7.4L391.7 78.9l-14-26c-7-12.9-20.5-21-35.2-21L280 32zM462.7 311.2l28.2 52.2c6.3 11.7 20.9 16 32.5 9.7s16-20.9 9.7-32.5l-28.2-52.2c2.3-.3 4.7-.4 7.1-.4c35.3 0 64 28.7 64 64s-28.7 64-64 64s-64-28.7-64-64c0-15.5 5.5-29.7 14.7-40.8zM187.3 376c-9.5 23.5-32.5 40-59.3 40c-35.3 0-64-28.7-64-64s28.7-64 64-64c26.9 0 49.9 16.5 59.3 40l66.4 0C242.5 268.8 190.5 224 128 224C57.3 224 0 281.3 0 352s57.3 128 128 128c62.5 0 114.5-44.8 125.8-104l-66.4 0zM128 384a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"/></svg>
+                            <h3 class="pt-1 text-xl font-bold capitalize">enjoy your ride</h3>
+                            <p class="text-center text-sm w-60 text-gray-300 pt-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, fugit!</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+
+               <!-- how bike rental work section end -->
+
+               <!-- offer section start -->
+
+            <section class="px-3 lg:px-0">
+                <div class=" grid lg:grid-cols-2 grid-cols-1 items-center my-32 justify-between gap-5">
+                    <div class=" flex flex-col gap-3 lg:gap-0 w-[600px]">
+                        <h1 class="text-5xl capitalize font-bold">limited time <span class="text-green-700">offers</span></h1>
+                        <h3 class="text-2xl capitalize font-semibold">30% discount and special offer</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor expedita laborum magnam corrupti debitis necessitatibus ullam. Pariatur quidem veniam exercitationem.</p>
+                        <div class="flex gap-9 items-center text-white">
+                            <button class="px-7 py-1.5 bg-green-600 rounded-lg capitalize">call us</button>
+                            <button class="px-7 py-1.5 bg-gray-600 rounded-lg capitalize">book now</button>
+                        </div>
+                    </div>
+                    <div class="">
+                     <img src="img/man standing.jpg" alt="">
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+            </section>
+
+                <!-- offer section end -->
+
+                <!-- customer says section start -->
+
+                <section class="px-3 lg:px-0">
+                    <div>
+                        <div class="flex lg:flex-row flex-col justify-between items-center gap-4 lg:gap-0">
+                            <div class="flex flex-col gap-5">
+                                <h1 class="text-5xl font-bold capitalize">What our <span class="text-green-700">customer says</span></h1>
+                                <p class="text-gray-800 text-base">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil reiciendis <br>perferendis, nam aliquam error dicta?</p>
+                            </div>
+                            <div>
+                                <button class="bg-gray-600 py-2 px-5 rounded-xl text-white capitalize">see more</button>
+                            </div>
+                        </div>
+                        <div class="grid lg:grid-cols-4 grid-cols-1 mt-11 gap-6">
+                                <div class="lg:w-[300px] h-[250px] bg-green-500 py-5 px-4 flex flex-col gap-4 rounded-xl">
+                                    <div class="flex gap-3 items-center">
+                                        <img src="img/customer1.jpg" alt="" class="w-10 h-10 rounded-full">
+                                        <div>
+                                            <h2 class="text-xl">David</h2>
+                                            <p>Project Manager</p>
+                                        </div>
+                                    </div>
+                                   <div class="items-start overflow-hidden">
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis sapiente aut harum architecto porro sint quo velit id, quaerat, animi debitis voluptatem inventore voluptates laboriosam non placeat. Nulla, at quos.</p>
+                                   </div>
+                                </div>
+                                <div class="lg:w-[300px] h-[250px] bg-green-500 py-5 px-4 flex flex-col gap-4 rounded-xl">
+                                    <div class="flex gap-3 items-center">
+                                        <img src="img/customer2.jpg" alt="" class="w-10 h-10 rounded-full">
+                                        <div>
+                                            <h2 class="text-xl">Leo</h2>
+                                            <p>Project Manager</p>
+                                        </div>
+                                    </div>
+                                   <div class="items-start overflow-hidden">
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis sapiente aut harum architecto porro sint quo velit id, quaerat, animi debitis voluptatem inventore voluptates laboriosam non placeat. Nulla, at quos.</p>
+                                   </div>
+                                </div>
+                                <div class="lg:w-[300px] h-[250px] bg-green-500 py-5 px-4 flex flex-col gap-4 rounded-xl">
+                                    <div class="flex gap-3 items-center">
+                                        <img src="img/customer3.jpg" alt="" class="w-10 h-10 rounded-full">
+                                        <div>
+                                            <h2 class="text-xl">Bento</h2>
+                                            <p>Project Manager</p>
+                                        </div>
+                                    </div>
+                                   <div class="items-start overflow-hidden">
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis sapiente aut harum architecto porro sint quo velit id, quaerat, animi debitis voluptatem inventore voluptates laboriosam non placeat. Nulla, at quos.</p>
+                                   </div>
+                                </div>
+                                <div class="lg:w-[300px] h-[250px] bg-green-500 py-5 px-4 flex flex-col gap-4 rounded-xl">
+                                    <div class="flex gap-3 items-center">
+                                        <img src="img/customer1.jpg" alt="" class="w-10 h-10 rounded-full">
+                                        <div>
+                                            <h2 class="text-xl">Ederson</h2>
+                                            <p>Project Manager</p>
+                                        </div>
+                                    </div>
+                                   <div class="items-start overflow-hidden">
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis sapiente aut harum architecto porro sint quo velit id, quaerat, animi debitis voluptatem inventore voluptates laboriosam non placeat. Nulla, at quos.</p>
+                                   </div>
+                                </div>
+                        </div>
+                    </div>
+                </section>
+
+                 <!-- customer says section end -->
+
+                 <!-- footer section start -->
+
+                 <section class="px-3">
+                    <footer class="mt-10 bg-slate-950  text-white">
+                        <div class="grid grid-cols-1 lg:grid-cols-4 px-8 py-3 gap-0">
+                            <div class="flex flex-col gap-5 items-start pt-[50px]">
+                                <img src="img/logo.svg" alt="">
+                                <div>
+                                    <p class="capitalize">follow us on</p>
+                                    <div class="flex gap-3">
+                                        <i class="fa-brands fa-facebook"></i>
+                                        <i class="fa-brands fa-square-instagram"></i>
+                                        <i class="fa-brands fa-twitter"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pt-[50px] flex flex-col gap-4">
+                                <h1 class="text-lg font-semibold">Company</h1>
+                                <div>
+                                    <p>About</p>
+                                    <p>Services</p>
+                                    <p>Contact Us</p>
+                                </div>
+                            </div>
+                            <div class="pt-[50px] flex flex-col gap-4">
+                                <h1 class="text-lg font-semibold">Company</h1>
+                                <div class="capitalize">
+                                    <p>Terms & conditaion</p>
+                                    <p>Privacy Policy</p>
+                                    <p>Book a ride</p>
+                                    <p>help</p>
+                                </div>
+                            </div>
+                            <div class="pt-[50px] flex flex-col gap-2">
+                                <h1 class="text-lg font-semibold">Subcribe</h1>
+                                <input type="email" placeholder="Email-Adress" class="w-[200px] text-sm p-2 rounded-xl text-black">
+                            </div>
+                        </div>
+                        <hr>
+                        <p class="text-center py-2 capitalize text-gray-700">© all right reserved by NOVA RIDE</p>
+                    </footer>
+                </section>
+
+                  <!-- footer section end -->
+
+                 
+</body>
+</html>

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bike list</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="overflow-x-hidden">
+
+ <!-- header part start -->
+
+ <section>
+  <header class="py-6 px-3 relative z-10">
+      <nav class="flex items-center justify-between">
+          <div>
+              <img src="img/logo.svg" alt="" class="h-[33.44px] w-[180px]">
+          </div>
+          <div class="text-black gap-11 hidden lg:block">
+              <ul class="flex gap-10 text-lg font-medium ">
+                  <li><a href="index.html" class="hover:text-green-700">Home</a></li>
+                  <li><a href="abou_us.html" class="hover:text-green-700">About Us</a></li>
+                  <li class="relative group">
+                      <a href="" class="hover:text-green-700">Bikes
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" class=" inline-block"
+                              viewBox="0 0 24 24">
+                              <path
+                                  d="M12 16a1 1 0 0 1-.71-.29l-6-6a1 1 0 0 1 1.42-1.42l5.29 5.3 5.29-5.29a1 1 0 0 1 1.41 1.41l-6 6a1 1 0 0 1-.7.29z"
+                                  data-name="16" data-original="#000000"></path>
+                          </svg>
+                      </a>
+                      <ul
+                          class="absolute bg-green-500 min-w-[250px] group-hover:max-h-[700px]  rounded-2xl top-10 laft-0 space-y-2 shadow-lg text-white max-h-0 overflow-hidden px-5 group-hover:pb-4 group-hover:pt-4 transition-all duration-500">
+                          <li><a href="bike_list.html" class="hover:text-gray-800">Bike lists</a></li>
+                          <li><a href="bike_type.html" class="hover:text-gray-800">Bike Type</a></li>
+                          <li><a href="bike_single.html" class="hover:text-gray-800">Bike Single</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="contact_us.html" class="hover:text-green-700">Contact Us</a></li>
+              </ul>
+          </div>
+          <div class=" lg:flex gap-4 items-center hidden">
+              <button class="bg-green-600 py-[13px] px-5 rounded-full text-white">
+                  Book a Rental
+              </button>
+              <div>
+                  <img src="img/arrow-right-24.png" alt="" class="p-3 bg-green-600 rounded-full">
+              </div>
+          </div>
+          <button class="p-2 lg:hidden" onclick="handleMenu()">
+              <i class="fa-solid fa-bars fa-xl"></i>
+          </button>
+
+
+          <div id="nav_dialog" class="fixed h-[300px] w-screen bg-white inset-0 py-6 px-3 hidden">
+              <div id="nav_bar" class="flex justify-between">
+                  <div>
+                      <img src="img/logo.svg" alt="" class="h-[33.44px] w-[180px]">
+                  </div>
+                  <button class="p-2 lg:hidden" onclick="handleMenu()">
+                      <i class="fa-solid fa-xmark fa-xl text-gray-600"></i>
+                  </button>
+              </div>
+              <div class="mt-6">
+                  <ul class=" flex flex-col gap-3 text-lg font-medium ">
+                      <li><a href="index.html" class="hover:text-green-700">Home</a></li>
+                      <li><a href="abou_us.html" class="hover:text-green-700">About Us</a></li>
+                      <li class="relative group">
+                          <a href="" class="hover:text-green-700">Bikes
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" class=" inline-block"
+                                  viewBox="0 0 24 24">
+                                  <path
+                                      d="M12 16a1 1 0 0 1-.71-.29l-6-6a1 1 0 0 1 1.42-1.42l5.29 5.3 5.29-5.29a1 1 0 0 1 1.41 1.41l-6 6a1 1 0 0 1-.7.29z"
+                                      data-name="16" data-original="#000000"></path>
+                              </svg>
+                          </a>
+                          <ul
+                              class="absolute bg-green-500 min-w-[250px] group-hover:max-h-[700px]  rounded-2xl top-10 laft-0 space-y-2 shadow-lg text-white max-h-0 overflow-hidden px-5 group-hover:pb-4 group-hover:pt-4 transition-all duration-500">
+                              <li><a href="bike_list.html" class="hover:text-gray-800">Bike lists</a></li>
+                              <li><a href="bike_type.html" class="hover:text-gray-800">Bike Type</a></li>
+                              <li><a href="bike_single.html" class="hover:text-gray-800">Bike Single</a></li>
+                          </ul>
+                      </li>
+                      <li><a href="contact_us.html" class="hover:text-green-700">Contact Us</a></li>
+                  </ul> 
+              </div>
+              <div class="mt-1">
+              <p class="py-3 px-4 bg-green-600 text-center rounded-lg">Book A Rental</p>
+              </div>
+
+          </div>
+      </nav>
+  </header>
+
+
+  <script>
+      const navDialog = document.getElementById('nav_dialog');
+      function handleMenu() {
+          navDialog.classList.toggle('hidden');
+      }
+  </script>
+  
+</section>
+
+<!-- header part end -->
+
+
+
+
+ <!-- second section start -->
+
+ <section class="mt-10">
+  <div class="relative px-3 ">
+      <div class="relative z-0 rounded-xl"
+          style="background-image: url('img/file.jpg'); width:100%; height: 400px; background-size: cover; background-position: center;">
+
+          <div class="absolute bg-[#00000095] rounded-xl top-0 left-0 right-0 bottom-0"></div>
+      </div>
+      <div class=" absolute top-40 left-0 right-0 items-center flex flex-col text-white gap-2">
+          <h1 class="capitalize text-5xl font-bold">bike list</h1>
+          <p class="text-2xl capitalize font-semibold">home/ <span class="text-green-600">bike list</span></p>
+      </div>
+  </div>
+  
+
+</section>
+
+<!-- second section end -->
+
+
+
+
+    
+    <section class="mb-20 px-3">
+        <div class="grid lg:grid-cols-[1fr_3fr] justify-center items-start pt-20 gap-6 px-4 lg:px-0">
+          <div class="bg-[#fff8f6] lg:sticky lg:left-0 lg:top-4 flex flex-col justify-start items-start px-8 rounded-2xl">
+            <div class="border-b border-gray-100 pb-2 w-[100%]">
+              <input type="text" placeholder="Search...." class="px-4 py-4 rounded-full my-6 w-[100%] md:w-full border-none h-12">
+  
+              <div class="border-t border-gray-100 pb-4">
+                <h1 class="text-2xl font-bold mt-6">bike Types</h1>
+                <ul class="mt-6 flex flex-col gap-3 text-[#A9A9A9]">
+                  <li>
+                    <label>
+                      <input type="checkbox" name="ofcar-types[]" value="12" class="focus:outline-none focus:ring-0 border border-black shadow-none mr-2">
+                      Convertible bike
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input type="checkbox" name="ofcar-types[]" value="16" class="focus:outline-none focus:ring-0 border border-black shadow-none mr-2">
+                      Coupe bike
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input type="checkbox" name="ofcar-types[]" value="15" class="focus:outline-none focus:ring-0 border border-black shadow-none mr-2">
+                      Electric bike
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input type="checkbox" name="ofcar-types[]" value="14" class="focus:outline-none focus:ring-0 border border-black shadow-none mr-2">
+                      Luxury bike
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input type="checkbox" name="ofcar-types[]" value="13" class="focus:outline-none focus:ring-0 border border-black shadow-none mr-2">
+                      Sedan bike
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input type="checkbox" name="ofcar-types[]" value="11" class="focus:outline-none focus:ring-0 border border-black shadow-none mr-2">
+                      Sport bike
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <a href="#" class="flex justify-end group my-6">
+              <span class="border bg-blue-500 py-2 px-6 rounded-full text-white text-lg font-medium border-none">
+                Search
+              </span>
+            </a>
+          </div>
+          <div>
+            <div class="grid grid-cols-1 sm:grid-cols-[1fr_1fr] md:grid-cols-[1fr_1fr_1fr] justify-center items-center gap-6">
+              <div class="border border-gray-200 rounded-2xl h-[100%] flex justify-center items-center">
+                <div class="text-grey-200 px-6 py-8 flex flex-col gap-2 items-start justify-start">
+                  <div>
+                    <img src="img/motorcyle.jpg" alt="" class="w-[100%] h-[100%] mx-auto items-start">
+                  </div>
+                  <div>
+                    <span class="rounded-full bg-gray-100 px-2 py-1">Luxury bike</span>
+                    <h2 class="mt-4 text-xl font-semibold">Breeze Compact</h2>
+                  </div>
+                  <div class="flex flex-row items-center justify-between w-full mt-5">
+                    <div class="flex flex-row items-center gap-2">
+                      <img src="img/piston.png" class="w-[20px]">
+                      <p>Doors</p>
+
+                    </div>
+                    <p>6</p>
+                  </div>
+                  <div class="flex flex-row items-center justify-between w-full mt-4 border-b border-gray-200 pb-5">
+                    <div class="flex flex-row items-center gap-2">
+                      <img src="img/chain.png" class="w-[20px]">
+                      <p>Doors</p>
+                    </div>
+                    <p>6</p>
+                  </div>
+                  <div class="mt-5 flex flex-row justify-between w-full items-center">
+                    <h1 class="text-xl font-bold">
+                      $253<span class="text-base font-thin">/Per Day</span>
+                    </h1>
+                    <a href="#" class="flex justify-end">
+                      <span class="bg-blue-500 w-[3rem] h-[3rem] rounded-full flex items-center justify-center relative group-hover:bg-black">
+                        <img src="img/arrow-right-24.png" class="w-6 h-6 text-white">
+                       
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="border border-gray-200 rounded-2xl h-[100%] flex justify-center items-center">
+                <div class="text-grey-200 px-6 py-8 flex flex-col gap-2 items-start justify-start">
+                  <div>
+                    <img src="img/motorcyle.jpg" alt="" class="w-[100%] h-[100%] mx-auto items-start">
+                  </div>
+                  <div>
+                    <span class="rounded-full bg-gray-100 px-2 py-1">Luxury bike</span>
+                    <h2 class="mt-4 text-xl font-semibold">Voyager Hybrid</h2>
+                  </div>
+                  <div class="flex flex-row items-center justify-between w-full mt-5">
+                    <div class="flex flex-row items-center gap-2">
+                      <img src="./images/icon-door.svg">
+                      <p>Doors</p>
+                    </div>
+                    <p>6</p>
+                  </div>
+                  <div class="flex flex-row items-center justify-between w-full mt-4 border-b border-gray-200 pb-5">
+                    <div class="flex flex-row items-center gap-2">
+                      <img src="./images/icon-passengers.svg">
+                      <p>Doors</p>
+                    </div>
+                    <p>6</p>
+                  </div>
+                  <div class="mt-5 flex flex-row justify-between w-full items-center">
+                    <h1 class="text-xl font-bold">
+                      $253<span class="text-base font-thin">/Per Day</span>
+                    </h1>
+                    <a href="#" class="flex justify-end">
+                      <span class="bg-blue-500 w-[3rem] h-[3rem] rounded-full flex items-center justify-center relative group-hover:bg-black">
+                        <img src="img/arrow-right-24.png" class="w-6 h-6 text-white">
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="border border-gray-200 rounded-2xl h-[100%] flex justify-center items-center">
+                <div class="text-grey-200 px-6 py-8 flex flex-col gap-2 items-start justify-start">
+                  <div>
+                    <img src="img/motorcyle.jpg" alt="" class="w-[100%] h-[100%] mx-auto items-start">
+                  </div>
+                  <div>
+                    <span class="rounded-full bg-gray-100 px-2 py-1">Luxury Car</span>
+                    <h2 class="mt-4 text-xl font-semibold">Viper SXT</h2>
+                  </div>
+                  <div class="flex flex-row items-center justify-between w-full mt-5">
+                    <div class="flex flex-row items-center gap-2">
+                      <img src="./images/icon-door.svg">
+                      <p>Doors</p>
+                    </div>
+                    <p>6</p>
+                  </div>
+                  <div class="flex flex-row items-center justify-between w-full mt-4 border-b border-gray-200 pb-5">
+                    <div class="flex flex-row items-center gap-2">
+                      <img src="./images/icon-passengers.svg">
+                      <p>Doors</p>
+                    </div>
+                    <p>6</p>
+                  </div>
+                  <div class="mt-5 flex flex-row justify-between w-full items-center">
+                    <h1 class="text-xl font-bold">
+                      $253<span class="text-base font-thin">/Per Day</span>
+                    </h1>
+                    <a href="#" class="flex justify-end">
+                      <span class="bg-blue-500 w-[3rem] h-[3rem] rounded-full flex items-center justify-center relative group-hover:bg-black">
+                        <img src="img/arrow-right-24.png" class="w-6 h-6 text-white">
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="border border-gray-200 rounded-2xl h-[100%] flex justify-center items-center">
+                <div class="text-grey-200 px-6 py-8 flex flex-col gap-2 items-start justify-start">
+                  <div>
+                    <img src="img/motorcyle.jpg" alt="" class="w-[100%] h-[100%] mx-auto items-start">
+                  </div>
+                  <div>
+                    <span class="rounded-full bg-gray-100 px-2 py-1">Luxury Car</span>
+                    <h2 class="mt-4 text-xl font-semibold">
+                      Sapphire Convertible
+                    </h2>
+                  </div>
+                  <div class="flex flex-row items-center justify-between w-full mt-5">
+                    <div class="flex flex-row items-center gap-2">
+                      <img src="./images/icon-door.svg">
+                      <p>Doors</p>
+                    </div>
+                    <p>6</p>
+                  </div>
+                  <div class="flex flex-row items-center justify-between w-full mt-4 border-b border-gray-200 pb-5">
+                    <div class="flex flex-row items-center gap-2">
+                      <img src="./images/icon-passengers.svg">
+                      <p>Doors</p>
+                    </div>
+                    <p>6</p>
+                  </div>
+                  <div class="mt-5 flex flex-row justify-between w-full items-center">
+                    <h1 class="text-xl font-bold">
+                      $253<span class="text-base font-thin">/Per Day</span>
+                    </h1>
+                    <a href="#" class="flex justify-end ">
+                      <span class="bg-blue-500 w-[3rem] h-[3rem] rounded-full flex items-center justify-center relative group-hover:bg-black">
+                        <img src="img/arrow-right-24.png" class="w-6 h-6 text-white">
+                       
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="border border-gray-200 rounded-2xl h-[100%] flex justify-center items-center">
+                <div class="text-grey-200 px-6 py-8 flex flex-col gap-2 items-start justify-start">
+                  <div>
+                    <img src="img/motorcyle.jpg" alt="" class="w-[100%] h-[100%] mx-auto items-start">
+                  </div>
+                  <div>
+                    <span class="rounded-full bg-gray-100 px-2 py-1">Luxury Car</span>
+                    <h2 class="mt-4 text-xl font-semibold">Voyager GT</h2>
+                  </div>
+                  <div class="flex flex-row items-center justify-between w-full mt-5">
+                    <div class="flex flex-row items-center gap-2">
+                      <img src="./images/icon-door.svg">
+                      <p>Doors</p>
+                    </div>
+                    <p>6</p>
+                  </div>
+                  <div class="flex flex-row items-center justify-between w-full mt-4 border-b border-gray-200 pb-5">
+                    <div class="flex flex-row items-center gap-2">
+                      <img src="./images/icon-passengers.svg">
+                      <p>Doors</p>
+                    </div>
+                    <p>6</p>
+                  </div>
+                  <div class="mt-5 flex flex-row justify-between w-full items-center">
+                    <h1 class="text-xl font-bold">
+                      $253<span class="text-base font-thin">/Per Day</span>
+                    </h1>
+                    <a href="#" class="flex justify-end">
+                      <span class="bg-blue-500 w-[3rem] h-[3rem] rounded-full flex items-center justify-center relative group-hover:bg-black">
+                        <img src="img/arrow-right-24.png" class="w-6 h-6 text-white">
+                        
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="border border-gray-200 rounded-2xl h-[100%] flex justify-center items-center">
+                <div class="text-grey-200 px-6 py-8 flex flex-col gap-2 items-start justify-start">
+                  <div>
+                    <img src="img/motorcyle.jpg" alt="" class="w-[100%] h-[100%] mx-auto items-start">
+                  </div>
+                  <div>
+                    <span class="rounded-full bg-gray-100 px-2 py-1">Luxury Car</span>
+                    <h2 class="mt-4 text-xl font-semibold">Voyager Hybrid</h2>
+                  </div>
+                  <div class="flex flex-row items-center justify-between w-full mt-5">
+                    <div class="flex flex-row items-center gap-2">
+                      <img src="./images/icon-door.svg">
+                      <p>Doors</p>
+                    </div>
+                    <p>6</p>
+                  </div>
+                  <div class="flex flex-row items-center justify-between w-full mt-4 border-b border-gray-200 pb-5">
+                    <div class="flex flex-row items-center gap-2">
+                      <img src="./images/icon-passengers.svg">
+                      <p>Doors</p>
+                    </div>
+                    <p>6</p>
+                  </div>
+                  <div class="mt-5 flex flex-row justify-between w-full items-center">
+                    <h1 class="text-xl font-bold">
+                      $253<span class="text-base font-thin">/Per Day</span>
+                    </h1>
+                    <a href="#" class="flex justify-end">
+                      <span class="bg-blue-500 w-[3rem] h-[3rem] rounded-full flex items-center justify-center relative group-hover:bg-black">
+                        <img src="img/arrow-right-24.png" class="w-6 h-6 text-white">
+                        
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-center flex flex-row gap-4 py-8 justify-center items-center">
+              <a href="#" class="flex justify-end group">
+                <span class="bg-blue-500 w-[2.5rem] h-[2.5rem] rounded-full flex items-center justify-center relative group-hover:bg-black">
+                  <span class="text-xl font-bold text-white">1</span>
+                </span>
+              </a>
+              <a href="#" class="flex justify-end group">
+                <span class="bg-blue-500 w-[2.5rem] h-[2.5rem] rounded-full flex items-center justify-center relative group-hover:bg-black">
+                  <span class="text-xl font-bold text-white">2</span>
+                </span>
+              </a>
+              <a href="#" class="flex justify-end group">
+                <span class="bg-blue-500 w-[2.5rem] h-[2.5rem] rounded-full flex items-center justify-center relative group-hover:bg-black">
+                  <span class="text-xl font-bold text-white">3</span>
+                </span>
+              </a>
+              <a href="#" class="flex justify-end group">
+                <span class="bg-blue-500 w-[2.5rem] h-[2.5rem] rounded-full flex items-center justify-center relative group-hover:bg-black">
+                  <span class="text-xl font-bold text-white">4</span>
+                </span>
+              </a>
+              <a href="#" class="flex justify-end group">
+                <span class="bg-blue-500 w-[2.5rem] h-[2.5rem] rounded-full flex items-center justify-center relative group-hover:bg-black">
+                  <img src="img/arrow-right-24.png" class="w-6 h-6 text-white transition-opacity duration-3000">
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+       <!-- footer section start -->
+
+       <section class="px-3">
+        <footer class="mt-10 bg-slate-950  text-white">
+            <div class="grid grid-cols-1 lg:grid-cols-4 px-8 py-3 gap-0">
+                <div class="flex flex-col gap-5 items-start pt-[50px]">
+                    <img src="img/logo.svg" alt="">
+                    <div>
+                        <p class="capitalize">follow us on</p>
+                        <div class="flex gap-3">
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-square-instagram"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-[50px] flex flex-col gap-4">
+                    <h1 class="text-lg font-semibold">Company</h1>
+                    <div>
+                        <p>About</p>
+                        <p>Services</p>
+                        <p>Contact Us</p>
+                    </div>
+                </div>
+                <div class="pt-[50px] flex flex-col gap-4">
+                    <h1 class="text-lg font-semibold">Company</h1>
+                    <div class="capitalize">
+                        <p>Terms & conditaion</p>
+                        <p>Privacy Policy</p>
+                        <p>Book a ride</p>
+                        <p>help</p>
+                    </div>
+                </div>
+                <div class="pt-[50px] flex flex-col gap-2">
+                    <h1 class="text-lg font-semibold">Subcribe</h1>
+                    <input type="email" placeholder="Email-Adress" class="w-[200px] text-sm p-2 rounded-xl text-black">
+                </div>
+            </div>
+            <hr>
+            <p class="text-center py-2 capitalize text-gray-700">© all right reserved by NOVA RIDE</p>
+        </footer>
+    </section>
+
+  <!-- footer section end -->
+</body>
+</html>

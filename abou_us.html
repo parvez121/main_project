@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="output.css">
+</head>
+
+<body class="overflow-x-hidden">
+    <!-- header section start -->
+
+    <section>
+        <header class="py-6 px-3 relative z-10">
+            <nav class="flex items-center justify-between">
+                <div>
+                    <img src="img/logo.svg" alt="" class="h-[33.44px] w-[180px]">
+                </div>
+                <div class="text-black gap-11 hidden lg:block">
+                    <ul class="flex gap-10 text-lg font-medium ">
+                        <li><a href="index.html" class="hover:text-green-700">Home</a></li>
+                        <li><a href="abou_us.html" class="hover:text-green-700">About Us</a></li>
+                        <li class="relative group">
+                            <a href="" class="hover:text-green-700">Bikes
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" class=" inline-block"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 16a1 1 0 0 1-.71-.29l-6-6a1 1 0 0 1 1.42-1.42l5.29 5.3 5.29-5.29a1 1 0 0 1 1.41 1.41l-6 6a1 1 0 0 1-.7.29z"
+                                        data-name="16" data-original="#000000"></path>
+                                </svg>
+                            </a>
+                            <ul
+                                class="absolute bg-green-500 min-w-[250px] group-hover:max-h-[700px]  rounded-2xl top-10 laft-0 space-y-2 shadow-lg text-white max-h-0 overflow-hidden px-5 group-hover:pb-4 group-hover:pt-4 transition-all duration-500">
+                                <li><a href="bike_list.html" class="hover:text-gray-800">Bike lists</a></li>
+                                <li><a href="bike_type.html" class="hover:text-gray-800">Bike Type</a></li>
+                                <li><a href="bike_single.html" class="hover:text-gray-800">Bike Single</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contact_us.html" class="hover:text-green-700">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class=" lg:flex gap-4 items-center hidden">
+                    <button class="bg-green-600 py-[13px] px-5 rounded-full text-white">
+                        Book a Rental
+                    </button>
+                    <div>
+                        <img src="img/arrow-right-24.png" alt="" class="p-3 bg-green-600 rounded-full">
+                    </div>
+                </div>
+                <button class="p-2 lg:hidden" onclick="handleMenu()">
+                    <i class="fa-solid fa-bars fa-xl"></i>
+                </button>
+      
+      
+                <div id="nav_dialog" class="fixed h-[300px] w-screen bg-white inset-0 py-6 px-3 hidden">
+                    <div id="nav_bar" class="flex justify-between">
+                        <div>
+                            <img src="img/logo.svg" alt="" class="h-[33.44px] w-[180px]">
+                        </div>
+                        <button class="p-2 lg:hidden" onclick="handleMenu()">
+                            <i class="fa-solid fa-xmark fa-xl text-gray-600"></i>
+                        </button>
+                    </div>
+                    <div class="mt-6">
+                        <ul class=" flex flex-col gap-3 text-lg font-medium ">
+                            <li><a href="index.html" class="hover:text-green-700">Home</a></li>
+                            <li><a href="abou_us.html" class="hover:text-green-700">About Us</a></li>
+                            <li class="relative group">
+                                <a href="" class="hover:text-green-700">Bikes
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" class=" inline-block"
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 16a1 1 0 0 1-.71-.29l-6-6a1 1 0 0 1 1.42-1.42l5.29 5.3 5.29-5.29a1 1 0 0 1 1.41 1.41l-6 6a1 1 0 0 1-.7.29z"
+                                            data-name="16" data-original="#000000"></path>
+                                    </svg>
+                                </a>
+                                <ul
+                                    class="absolute bg-green-500 min-w-[250px] group-hover:max-h-[700px]  rounded-2xl top-10 laft-0 space-y-2 shadow-lg text-white max-h-0 overflow-hidden px-5 group-hover:pb-4 group-hover:pt-4 transition-all duration-500">
+                                    <li><a href="bike_list.html" class="hover:text-gray-800">Bike lists</a></li>
+                                    <li><a href="bike_type.html" class="hover:text-gray-800">Bike Type</a></li>
+                                    <li><a href="bike_single.html" class="hover:text-gray-800">Bike Single</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="contact_us.html" class="hover:text-green-700">Contact Us</a></li>
+                        </ul> 
+                    </div>
+                    <div class="mt-1">
+                    <p class="py-3 px-4 bg-green-600 text-center rounded-lg">Book A Rental</p>
+                    </div>
+      
+                </div>
+            </nav>
+        </header>
+      
+      
+        <script>
+            const navDialog = document.getElementById('nav_dialog');
+            function handleMenu() {
+                navDialog.classList.toggle('hidden');
+            }
+        </script>
+        
+      </section>
+    <!-- header section end -->
+
+    <!-- second section start -->
+
+    <section class="mt-10">
+        <div class="relative px-3 ">
+            <div class="relative z-0 rounded-xl"
+                style="background-image: url('img/file.jpg'); width:100%; height: 400px; background-size: cover; background-position: center;">
+
+                <div class="absolute bg-[#00000095] rounded-xl top-0 left-0 right-0 bottom-0"></div>
+            </div>
+            <div class=" absolute top-40 left-0 right-0 items-center flex flex-col text-white gap-2">
+                <h1 class="capitalize text-5xl font-bold">about us</h1>
+                <p class="text-2xl capitalize font-semibold">home/ <span class="text-green-600">about us</span></p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- second section end -->
+
+    <!-- about us section start -->
+
+    <section>
+        <div class="grid grid-cols-1 lg:grid-cols-2 mt-10 gap-20 lg:gap-0">
+            <div class="relative mb-40 px-4">
+                <div class="lg:w-[300px] lg:h-[140px] w-[200px] h-[50px]">
+                    <img src="img/ladie2.jpg" alt="" class="rounded-full">
+                </div>
+                <div class="lg:w-[300px] lg:h-[140px] w-[200px] h-[50px] absolute lg:left-60 lg:top-64 left-32 top-20">
+                    <img src="img/ladie1.jpg" alt="" class="rounded-full">
+                </div>
+            </div>
+            <div class="mt-36 lg:mt-0 px-4 lg:px-0">
+                <h6 class="text-green-600 lg:text-lg font-semibold">About Us</h6>
+                <h1 class="lg:text-5xl text-3xl font-bold my-6">Your dependable choice for hassle-free car rentals</h1>
+                <p class="text-gray-400 my-6">Aqestic Optio Amet A Ququam Saepe Aliquid Voluate Dicta Fuga Dolor Saerror Sed Earum A Magni Soluta Quam Minus Dolor Dolor</p>
+                <div class="flex items-center gap-10 group">
+                    <div class="relative">
+                        <div class="relative left-0 top-0 w-[60px] h-[60px] opacity-5 z-0 rounded-full bg-green-500 group-hover:opacity-70" ></div>
+                        <img src="img/motor_icon.png" alt="" class="w-74 h-75 top-3 left-2 absolute">
+                    </div>
+                    <div class="px-3">
+                        <h3 class="text-xl font-bold py-4">Easy Booking Process</h3>
+                        <p class="text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos adipisci placeat id sunt omnis laborum ad non doloribus magni pariatur?
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-10 group my-9">
+                    <div class="relative">
+                        <div class="relative left-0 top-0 w-[60px] h-[60px] opacity-5 z-0 rounded-full bg-green-500 group-hover:opacity-70" ></div>
+                        <img src="img/motor_icon.png" alt="" class="w-74 h-75 top-3 left-2 absolute">
+                    </div>
+                    <div class="px-3">
+                        <h3 class="text-xl font-bold py-4">Easy Booking Process</h3>
+                        <p class="text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos adipisci placeat id sunt omnis laborum ad non doloribus magni pariatur?
+                        </p>
+                    </div>
+                </div>
+                <div class="flex gap-3">
+                    <button class="bg-green-600 py-[13px] px-5 rounded-full text-white">
+                        Book a Rental
+                    </button>
+                    <div>
+                        <img src="img/arrow-right-24.png" alt="" class="p-3 bg-green-600 rounded-full">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- about us section end -->
+
+    <!-- why us section start -->
+
+    <section>
+
+        <div class="mt-40 px-3 mb-20">
+            <div class="mb-6">
+                <p class="text-center text-3xl font-bold capitalize">why <span class="text-green-600">us</span></p>
+
+            </div>
+            <div class="grid lg:grid-cols-3 grid-cols-1 gap-7">
+                <div class="  flex flex-col items-center justify-center py-8 px-3 gap-2 shadow-lg">
+                    <svg class="w-[40px] h-[30px]" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path fill="#43c214"
+                            d="M256 0c4.6 0 9.2 1 13.4 2.9L457.7 82.8c22 9.3 38.4 31 38.3 57.2c-.5 99.2-41.3 280.7-213.6 363.2c-16.7 8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.8 1 251.4 0 256 0zm0 66.8l0 378.1C394 378 431.1 230.1 432 141.4L256 66.8s0 0 0 0z" />
+                    </svg>
+                    <h1 class="text-2xl font-bold capitalize">secureds payment</h1>
+                    <p class="text-center text-gray-500">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum
+                        neque magni accusantium nulla, reprehenderit adipisci cupiditate distinctio quam minus ducimus
+                        tempore error quis, labore culpa.</p>
+                </div>
+                <div class="  flex flex-col items-center justify-center py-8 px-3 gap-2 shadow-lg">
+                    <svg class="w-[40px] h-[30px]" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path fill="#43c214"
+                            d="M256 0c4.6 0 9.2 1 13.4 2.9L457.7 82.8c22 9.3 38.4 31 38.3 57.2c-.5 99.2-41.3 280.7-213.6 363.2c-16.7 8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.8 1 251.4 0 256 0zm0 66.8l0 378.1C394 378 431.1 230.1 432 141.4L256 66.8s0 0 0 0z" />
+                    </svg>
+                    <h1 class="text-2xl font-bold capitalize">secureds payment</h1>
+                    <p class="text-center text-gray-500">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum
+                        neque magni accusantium nulla, reprehenderit adipisci cupiditate distinctio quam minus ducimus
+                        tempore error quis, labore culpa.</p>
+                </div>
+                <div class="  flex flex-col items-center justify-center py-8 px-3 gap-2 shadow-lg">
+                    <svg class="w-[40px] h-[30px]" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path fill="#43c214"
+                            d="M256 0c4.6 0 9.2 1 13.4 2.9L457.7 82.8c22 9.3 38.4 31 38.3 57.2c-.5 99.2-41.3 280.7-213.6 363.2c-16.7 8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.8 1 251.4 0 256 0zm0 66.8l0 378.1C394 378 431.1 230.1 432 141.4L256 66.8s0 0 0 0z" />
+                    </svg>
+                    <h1 class="text-2xl font-bold capitalize">secureds payment</h1>
+                    <p class="text-center text-gray-500">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum
+                        neque magni accusantium nulla, reprehenderit adipisci cupiditate distinctio quam minus ducimus
+                        tempore error quis, labore culpa.</p>
+                </div>
+                <div class="  flex flex-col items-center justify-center py-8 px-3 gap-2 shadow-lg">
+                    <svg class="w-[40px] h-[30px]" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path fill="#43c214"
+                            d="M256 0c4.6 0 9.2 1 13.4 2.9L457.7 82.8c22 9.3 38.4 31 38.3 57.2c-.5 99.2-41.3 280.7-213.6 363.2c-16.7 8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.8 1 251.4 0 256 0zm0 66.8l0 378.1C394 378 431.1 230.1 432 141.4L256 66.8s0 0 0 0z" />
+                    </svg>
+                    <h1 class="text-2xl font-bold capitalize">secureds payment</h1>
+                    <p class="text-center text-gray-500">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum
+                        neque magni accusantium nulla, reprehenderit adipisci cupiditate distinctio quam minus ducimus
+                        tempore error quis, labore culpa.</p>
+                </div>
+                <div class=" flex flex-col items-center justify-center py-8 px-3 gap-2 shadow-lg">
+                    <svg class="w-[40px] h-[30px]" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path fill="#43c214"
+                            d="M256 0c4.6 0 9.2 1 13.4 2.9L457.7 82.8c22 9.3 38.4 31 38.3 57.2c-.5 99.2-41.3 280.7-213.6 363.2c-16.7 8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.8 1 251.4 0 256 0zm0 66.8l0 378.1C394 378 431.1 230.1 432 141.4L256 66.8s0 0 0 0z" />
+                    </svg>
+                    <h1 class="text-2xl font-bold capitalize">secureds payment</h1>
+                    <p class="text-center text-gray-500">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum
+                        neque magni accusantium nulla, reprehenderit adipisci cupiditate distinctio quam minus ducimus
+                        tempore error quis, labore culpa.</p>
+                </div>
+                <div class="  flex flex-col items-center justify-center py-8 px-3 gap-2 shadow-lg">
+                    <svg class="w-[40px] h-[30px]" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path fill="#43c214"
+                            d="M256 0c4.6 0 9.2 1 13.4 2.9L457.7 82.8c22 9.3 38.4 31 38.3 57.2c-.5 99.2-41.3 280.7-213.6 363.2c-16.7 8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.8 1 251.4 0 256 0zm0 66.8l0 378.1C394 378 431.1 230.1 432 141.4L256 66.8s0 0 0 0z" />
+                    </svg>
+                    <h1 class="text-2xl font-bold capitalize">secureds payment</h1>
+                    <p class="text-center text-gray-500">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum
+                        neque magni accusantium nulla, reprehenderit adipisci cupiditate distinctio quam minus ducimus
+                        tempore error quis, labore culpa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- why us section end -->
+
+    <!-- team member section start -->
+
+    <section class="bg-[#fff8f6] py-20 mt-14">
+        <p class="text-center capitalize text-3xl pb-3 font-bold">Meet our <span class="text-green-600">team
+                member</span></p>
+        <div class="grid lg:grid-cols-4 grid-cols-1 px-3 gap-5">
+            <div class="w-[97%] mx-auto mt-6 flex flex-col gap-3">
+                <div>
+                    <img src="img/customer2.jpg" alt="" class="rounded-xl">
+                </div>
+                <div>
+                    <h3 class="text-center text-xl capitalize font-semibold">John Smith</h3>
+                    <p class="text-center text-gray-500">Senior Chauffeur</p>
+                </div>
+                <div class="flex  gap-2 items-center justify-center">
+
+                    <a href=""><i class="fa-brands fa-facebook text-green-600"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter text-green-600"></i></a>
+                    <a href=""> <i class="fa-brands fa-instagram text-green-600"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin text-green-600"></i></a>
+                </div>
+            </div>
+            <div class="w-[97%] mx-auto mt-6 flex flex-col gap-3">
+                <div>
+                    <img src="img/customer2.jpg" alt="" class="rounded-xl">
+                </div>
+                <div>
+                    <h3 class="text-center text-xl capitalize font-semibold">John Smith</h3>
+                    <p class="text-center text-gray-500">Senior Chauffeur</p>
+                </div>
+                <div class="flex  gap-2 items-center justify-center">
+
+                    <a href=""><i class="fa-brands fa-facebook text-green-600"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter text-green-600"></i></a>
+                    <a href=""> <i class="fa-brands fa-instagram text-green-600"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin text-green-600"></i></a>
+                </div>
+            </div>
+            <div class="w-[97%] mx-auto mt-6 flex flex-col gap-3">
+                <div>
+                    <img src="img/customer2.jpg" alt="" class="rounded-xl">
+                </div>
+                <div>
+                    <h3 class="text-center text-xl capitalize font-semibold">John Smith</h3>
+                    <p class="text-center text-gray-500">Senior Chauffeur</p>
+                </div>
+                <div class="flex  gap-2 items-center justify-center">
+
+                    <a href=""><i class="fa-brands fa-facebook text-green-600"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter text-green-600"></i></a>
+                    <a href=""> <i class="fa-brands fa-instagram text-green-600"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin text-green-600"></i></a>
+                </div>
+            </div>
+            <div class="w-[97%] mx-auto mt-6 flex flex-col gap-3">
+                <div>
+                    <img src="img/customer2.jpg" alt="" class="rounded-xl">
+                </div>
+                <div>
+                    <h3 class="text-center text-xl capitalize font-semibold">John Smith</h3>
+                    <p class="text-center text-gray-500">Senior Chauffeur</p>
+                </div>
+                <div class="flex  gap-2 items-center justify-center">
+
+                    <a href=""><i class="fa-brands fa-facebook text-green-600"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter text-green-600"></i></a>
+                    <a href=""> <i class="fa-brands fa-instagram text-green-600"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin text-green-600"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- team member section end -->
+
+
+    <!-- why chose us section start -->
+
+    <section class="bg-gray-100 p-10">
+        <div class="text-center flex flex-col gap-4">
+            <p class="text-green-600 font-semibold text-lg">Why Choose Us</p>
+            <h1 class="lg:text-6xl text-3xl text-center px-35 font-bold">Discover the ease and convenience of renting with Us</h1>
+        </div>
+        <div class="grid lg:grid-cols-3 grid-cols-1 gap-6 lg:gap-0 items-center justify-center mt-9">
+            <div class="flex flex-col gap-10">
+                <div class="flex gap-8 group">
+                    <div class="relative">
+                        <div class="w-[35px] h-[35px] bg-green-600 opacity-10 rounded-full relative group-hover:opacity-70"></div>
+                        <img src="img/motor_icon.png" alt="" class="w-[33px] h-[33px] absolute top-1 left-1">
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold pb-2">Easy Booking prosess</h1>
+                        <p class="text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum suscipit necessitatibus iusto, labore dicta magni?</p>
+                    </div>
+                </div>
+                <hr class="border-gray-300">
+                <div class="flex gap-8 group">
+                    <div class="relative">
+                        <div class="w-[35px] h-[35px] bg-green-600 opacity-10 rounded-full relative group-hover:opacity-70"></div>
+                        <img src="img/motor_icon.png" alt="" class="w-[33px] h-[33px] absolute top-1 left-1">
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold pb-2">Easy Booking prosess</h1>
+                        <p class="text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum suscipit necessitatibus iusto, labore dicta magni?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="relative mx-auto">
+                <img src="img/why-choose-img-2.jpg" alt="" class="rounded-full w-[100%] mx-auto">
+                <img src="img/yamaha.png" alt="" class="absolute w-[200px] bottom-7 left-14">
+            </div>
+            <div class="flex flex-col gap-10">
+                <div class="flex gap-8 group">
+                    <div class="relative">
+                        <div class="w-[35px] h-[35px] bg-green-600 opacity-10 rounded-full relative group-hover:opacity-70"></div>
+                        <img src="img/motor_icon.png" alt="" class="w-[33px] h-[33px] absolute top-1 left-1">
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold pb-2">Easy Booking prosess</h1>
+                        <p class="text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum suscipit necessitatibus iusto, labore dicta magni?</p>
+                    </div>
+                </div>
+                <hr class="border-gray-300">
+                <div class="flex gap-8 group">
+                    <div class="relative">
+                        <div class="w-[35px] h-[35px] bg-green-600 opacity-10 rounded-full relative group-hover:opacity-70"></div>
+                        <img src="img/motor_icon.png" alt="" class="w-[33px] h-[33px] absolute top-1 left-1">
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold pb-2">Easy Booking prosess</h1>
+                        <p class="text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum suscipit necessitatibus iusto, labore dicta magni?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- why choose us section end -->
+
+
+    <!-- customer seys section start -->
+
+    <section class="px-3  mt-10">
+        <div>
+            <div class="flex lg:flex-row flex-col justify-between items-center gap-4 lg:gap-0">
+                <div class="flex flex-col gap-5">
+                    <h1 class="text-5xl font-bold capitalize">What our <span class="text-green-700">customer says</span></h1>
+                    <p class="text-gray-800 text-base">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil reiciendis <br>perferendis, nam aliquam error dicta?</p>
+                </div>
+                <div>
+                    <button class="bg-gray-600 py-2 px-5 rounded-xl text-white capitalize">see more</button>
+                </div>
+            </div>
+            <div class="grid lg:grid-cols-4 grid-cols-1 mt-11 gap-6">
+                    <div class="lg:w-[300px] h-[250px] bg-green-500 py-5 px-4 flex flex-col gap-4 rounded-xl">
+                        <div class="flex gap-3 items-center">
+                            <img src="img/customer1.jpg" alt="" class="w-10 h-10 rounded-full">
+                            <div>
+                                <h2 class="text-xl">David</h2>
+                                <p>Project Manager</p>
+                            </div>
+                        </div>
+                       <div class="items-start overflow-hidden">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis sapiente aut harum architecto porro sint quo velit id, quaerat, animi debitis voluptatem inventore voluptates laboriosam non placeat. Nulla, at quos.</p>
+                       </div>
+                    </div>
+                    <div class="lg:w-[300px] h-[250px] bg-green-500 py-5 px-4 flex flex-col gap-4 rounded-xl">
+                        <div class="flex gap-3 items-center">
+                            <img src="img/customer2.jpg" alt="" class="w-10 h-10 rounded-full">
+                            <div>
+                                <h2 class="text-xl">Leo</h2>
+                                <p>Project Manager</p>
+                            </div>
+                        </div>
+                       <div class="items-start overflow-hidden">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis sapiente aut harum architecto porro sint quo velit id, quaerat, animi debitis voluptatem inventore voluptates laboriosam non placeat. Nulla, at quos.</p>
+                       </div>
+                    </div>
+                    <div class="lg:w-[300px] h-[250px] bg-green-500 py-5 px-4 flex flex-col gap-4 rounded-xl">
+                        <div class="flex gap-3 items-center">
+                            <img src="img/customer3.jpg" alt="" class="w-10 h-10 rounded-full">
+                            <div>
+                                <h2 class="text-xl">Bento</h2>
+                                <p>Project Manager</p>
+                            </div>
+                        </div>
+                       <div class="items-start overflow-hidden">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis sapiente aut harum architecto porro sint quo velit id, quaerat, animi debitis voluptatem inventore voluptates laboriosam non placeat. Nulla, at quos.</p>
+                       </div>
+                    </div>
+                    <div class="lg:w-[300px] h-[250px] bg-green-500 py-5 px-4 flex flex-col gap-4 rounded-xl">
+                        <div class="flex gap-3 items-center">
+                            <img src="img/customer1.jpg" alt="" class="w-10 h-10 rounded-full">
+                            <div>
+                                <h2 class="text-xl">Ederson</h2>
+                                <p>Project Manager</p>
+                            </div>
+                        </div>
+                       <div class="items-start overflow-hidden">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis sapiente aut harum architecto porro sint quo velit id, quaerat, animi debitis voluptatem inventore voluptates laboriosam non placeat. Nulla, at quos.</p>
+                       </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <!-- customer says section end -->
+
+    <!-- footer section start -->
+
+    <section class="px-3">
+        <footer class="mt-10 bg-slate-950  text-white">
+            <div class="grid grid-cols-1 lg:grid-cols-4 px-8 py-3 gap-0">
+                <div class="flex flex-col gap-5 items-start pt-[50px]">
+                    <img src="img/logo.svg" alt="">
+                    <div>
+                        <p class="capitalize">follow us on</p>
+                        <div class="flex gap-3">
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-square-instagram"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-[50px] flex flex-col gap-4">
+                    <h1 class="text-lg font-semibold">Company</h1>
+                    <div>
+                        <p>About</p>
+                        <p>Services</p>
+                        <p>Contact Us</p>
+                    </div>
+                </div>
+                <div class="pt-[50px] flex flex-col gap-4">
+                    <h1 class="text-lg font-semibold">Company</h1>
+                    <div class="capitalize">
+                        <p>Terms & conditaion</p>
+                        <p>Privacy Policy</p>
+                        <p>Book a ride</p>
+                        <p>help</p>
+                    </div>
+                </div>
+                <div class="pt-[50px] flex flex-col gap-2">
+                    <h1 class="text-lg font-semibold">Subcribe</h1>
+                    <input type="email" placeholder="Email-Adress" class="w-[200px] text-sm p-2 rounded-xl text-black">
+                </div>
+            </div>
+            <hr>
+            <p class="text-center py-2 capitalize text-gray-700">© all right reserved by NOVA RIDE</p>
+        </footer>
+    </section>
+
+    <!-- footer section end -->
+</body>
+
+</html>
