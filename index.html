@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="output.css">
 </head>
-<body class="lg:px-6 lg-bg-white overflow-x-hidden">
+<body class="lg:px-4 lg-bg-white">
 
     <!-- header part start -->
 
     <section>
-        <header class="py-6 px-3 relative z-10">
+        <header class="lg:px-0 px-3 relative z-10">
             <nav class="flex items-center justify-between">
                 <div>
-                    <img src="img/logo.svg" alt="" class="h-[33.44px] w-[180px]">
+                    <img src="img/logo.png" alt="" class="w-[150px] h-[100px]">
                 </div>
                 <div class="text-black gap-11 hidden lg:block">
                     <ul class="flex gap-10 text-lg font-medium ">
@@ -53,16 +53,16 @@
                 </button>
       
       
-                <div id="nav_dialog" class="fixed h-[300px] w-screen bg-white inset-0 py-6 px-3 hidden">
+                <div id="nav_dialog" class="fixed h-[300px] w-screen bg-white inset-0 px-3 hidden">
                     <div id="nav_bar" class="flex justify-between">
                         <div>
-                            <img src="img/logo.svg" alt="" class="h-[33.44px] w-[180px]">
+                            <img src="img/logo.png" alt="" class="w-[150px] h-[100px]">
                         </div>
                         <button class="p-2 lg:hidden" onclick="handleMenu()">
                             <i class="fa-solid fa-xmark fa-xl text-gray-600"></i>
                         </button>
                     </div>
-                    <div class="mt-6">
+                    <div class="mt-0">
                         <ul class=" flex flex-col gap-3 text-lg font-medium ">
                             <li><a href="index.html" class="hover:text-green-700">Home</a></li>
                             <li><a href="abou_us.html" class="hover:text-green-700">About Us</a></li>
@@ -107,7 +107,7 @@
 
      <!-- second section start -->
 
-     <section>
+     <section class="mt-0 px-3 lg:px-0">
         <div class="relative z-0">
           <div class="relative">
             <img src="img/bg.jpg" alt="hero background" class="lg:rounded-2xl w-[100%] h-[36rem] lg:h-[52rem] xl:h-[50rem] object-cover">
@@ -252,7 +252,7 @@
 
     <section>
         <div class="grid grid-cols-1 lg:grid-cols-2 mt-10 gap-20 lg:gap-0">
-            <div class="relative mb-40 px-4">
+            <div class="relative mb-40 px-4 lg:px-0 ">
                 <div class="lg:w-[300px] lg:h-[140px] w-[200px] h-[50px]">
                     <img src="img/ladie2.jpg" alt="" class="rounded-full">
                 </div>
@@ -301,7 +301,7 @@
        <!-- about us section end -->
 
        <!-- services section start -->
-        <section class="bg-[#fff8f6] py-20 lg:mt-40 px-3">
+        <section class="bg-[#fff8f6] py-20 lg:mt-40 px-3 lg:px-0">
             <div class="flex flex-col items-center justify-center">
                 <h3 class="text-green-600 text-xl font-semibold pb-3">Our Services</h3>
                 <h1 class="lg:text-5xl text-3xl font-extrabold text-center">Discover our extensive selection of <br>
@@ -368,11 +368,11 @@
 
         <!-- our fleet section start -->
         <section>
-            <div class="flex flex-col items-center mt-16 w-full px-3">
+            <div class="flex flex-col items-center mt-16 w-full">
                 <h3 class="font-semibold text-green-500 capitalize">Our fleets</h3>
-                <h1 class="text-5xl font-bold my-5">Explore our perfect and extensive fleet</h1>
-                <div class="grid lg:grid-cols-4 grid-cols-1 mt-7 gap-5">
-                    <div class="items-start flex flex-col border-[1px] gap-y-4 py-6 rounded-2xl">
+                <h1 class="text-5xl font-bold my-5 text-center">Explore our perfect and extensive fleet</h1>
+                <div class="grid lg:grid-cols-[1fr_1fr_1fr_1fr] grid-cols-1 mt-7  gap-12">
+                    <div class="items-start flex flex-col border gap-y-4 py-6 rounded-2xl">
                         <div class="items-center justify-center mx-auto">
                             <img src="img/motorcyle.jpg" alt="" class="w-[200px] h-[200px]">
                         </div>
@@ -507,7 +507,7 @@
          <!-- our fleet section end -->
 
          <!-- car show section start -->
-        <section>
+         <section>
             <div class="mt-20">
                 <h1 class="text-center text-5xl font-bold">Bike Show</h1>
                 <div class="grid lg:grid-cols-4 grid-cols-1 mt-20 gap-4 px-5 lg:px-0yyyy">
@@ -744,8 +744,8 @@
                <!-- offer section start -->
 
             <section class="px-3 lg:px-0">
-                <div class=" grid lg:grid-cols-2 grid-cols-1 items-center my-32 justify-between gap-5">
-                    <div class=" flex flex-col gap-3 lg:gap-0 w-[600px]">
+                <div class=" grid lg:grid-cols-[1fr_1fr] grid-cols-1 items-center my-32 justify-between gap-5">
+                    <div class=" flex flex-col gap-3 lg:gap-0">
                         <h1 class="text-5xl capitalize font-bold">limited time <span class="text-green-700">offers</span></h1>
                         <h3 class="text-2xl capitalize font-semibold">30% discount and special offer</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor expedita laborum magnam corrupti debitis necessitatibus ullam. Pariatur quidem veniam exercitationem.</p>
@@ -778,7 +778,7 @@
                                 <button class="bg-gray-600 py-2 px-5 rounded-xl text-white capitalize">see more</button>
                             </div>
                         </div>
-                        <div class="grid lg:grid-cols-4 grid-cols-1 mt-11 gap-6">
+                        <div class="grid lg:grid-cols-4 grid-cols-1 mt-11 gap-7">
                                 <div class="lg:w-[300px] h-[250px] bg-green-500 py-5 px-4 flex flex-col gap-4 rounded-xl">
                                     <div class="flex gap-3 items-center">
                                         <img src="img/customer1.jpg" alt="" class="w-10 h-10 rounded-full">
@@ -835,13 +835,13 @@
 
                  <!-- footer section start -->
 
-                 <section class="px-3">
+                 <section class="px-3 lg:px-0">
                     <footer class="mt-10 bg-slate-950  text-white">
                         <div class="grid grid-cols-1 lg:grid-cols-4 px-8 py-3 gap-0">
-                            <div class="flex flex-col gap-5 items-start pt-[50px]">
-                                <img src="img/logo.svg" alt="">
-                                <div>
-                                    <p class="capitalize">follow us on</p>
+                            <div class=" items-start pt-[10px]">
+                                <img src="img/logo.png" alt="" class="w-[150px] h-[100px]">
+                                <div class="mt-[-30px]">
+                                    <p class="capitalize mb-3">follow us on</p>
                                     <div class="flex gap-3">
                                         <i class="fa-brands fa-facebook"></i>
                                         <i class="fa-brands fa-square-instagram"></i>
